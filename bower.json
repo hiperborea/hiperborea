@@ -1,0 +1,12 @@
+{
+  "name": "hiperborea",
+  "private": true,
+  "dependencies": {
+    "skrollr": "~0.6.26",
+    "foundation": "~5.3.0"
+  },
+  "devDependencies": {},
+  "resolutions": {
+    "jquery": ">= 2.1.0"
+  }
+}

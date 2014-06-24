@@ -1,0 +1,19 @@
+html, body, header, footer, div, ul, li, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    /*font-family*/
+}
+
+body {
+    background: #fafafa;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+#box2 h1 {
+    color: #ffffff;
+}
+
