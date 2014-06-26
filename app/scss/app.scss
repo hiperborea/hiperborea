@@ -79,7 +79,15 @@
     }
 }
 
-#box2 { background-color: #b3b3b3; }
+#box2 {
+    background-color: #b3b3b3;
+    padding: 3.0em;
+
+    div.columns:nth-child(1) {
+        background-color: #ff00cc;
+    }
+}
+
 #box3 { background-color: #00ccff; }
 #box4 { background-color: #00ffcc; }
 
