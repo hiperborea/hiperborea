@@ -1,7 +1,85 @@
 @import "settings";
 @import "foundation";
 
-h3, p {
-    color: #ffffff;
+@mixin stretch { margin: 0; padding: 0; }
+@mixin wfull { width:100%; }
+@mixin hfull { height:100vh; }
+
+#menubar {
+    @include wfull;
+    position: fixed;
+    z-index: 99;
+    top: -2.75em;
+    -skrollr-animation-name: animation1;
+    -skrollr-anchor-target: '#box2';
+
+    img.logo {
+        height: 2.45em;
+        width: auto;
+    }
 }
+
+@-skrollr-keyframes animation1 {
+    start {
+        position: fixed;
+        top: -2.75em;
+    }
+    top {
+        position: fixed;
+        top: 0em;
+    }
+}
+
+@-skrollr-keyframes animation2 {
+    start {
+        transform: rotate(0deg);
+    }
+    end {
+        transform: rotate(360deg);
+    }
+}
+
+@-skrollr-keyframes animation3 {
+    start {
+        transform: rotate(0deg);
+    }
+    end {
+        transform: rotate(-360deg);
+    }
+}
+
+#box1 {
+    background-image:url(../images/tile1.svg);
+    height: 60vh;
+    @include wfull;
+    margin-bottom: -3px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    div {
+        margin-right: 2vw;
+        width: 18vw;
+        height: 18vw;
+        
+        img:nth-child(1) {
+            width: 100%;
+            height: 100%;
+            -skrollr-animation-name: animation2;
+        }
+        img:nth-child(2) {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            top: -100%;
+            -skrollr-animation-name: animation3;
+        }
+    }
+}
+
+#box2 { background-color: #b3b3b3; }
+#box3 { background-color: #00ccff; }
+#box4 { background-color: #00ffcc; }
 

@@ -2,9 +2,10 @@
   "name": "hiperborea",
   "version": "0.0.1",
   "dependencies": {
+    "jquery": "~2.1.1",
     "foundation": ">=5.0.2",
     "skrollr": "~0.6.26",
-    "jquery": "~2.1.1"
+    "skrollr-stylesheets": "~0.0.6"
   },
   "devDependencies": {}
 }
