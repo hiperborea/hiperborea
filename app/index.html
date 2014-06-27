@@ -4,7 +4,8 @@
         <meta charset="utf-8" />
         <title>~ Hiperbórea ~</title>
         <meta name="description" content="" />
-        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+        <meta name="viewport"
+            content="width=device-width,initial-scale=1,maximum-scale=1" />
         <link rel="shortcut icon" href="/favicon.ico" />
 
         <!-- build:css(.tmp) styles/app.css -->
@@ -23,7 +24,9 @@
                     <h1><a href="#">
                         <img class="logo" src="../images/text_white.svg" />
                     </a></h1></li>
-                    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+                    <li class="toggle-topbar menu-icon">
+                        <a href="#"><span>Menu</span></a>
+                    </li>
                 </ul>
                 <section class="top-bar-section">
                     <ul class="right">
@@ -36,41 +39,57 @@
         </div>
 
         <div id="box1">
-            <div>
+            <div class="logo">
                 <img src="../images/logo_gray.svg" />
                 <img src="../images/logo_blue.svg" />
             </div>
-            <img src="../images/text_blue.svg" style="width:64vw;height:auto;" />
+            <div class="text">
+                <img src="../images/text_blue.svg" />
+            </div>
         </div>
 
         <div id="box2">
-            <ul class="small-block-grid-1 medium-block-grid-3">
-                <li>
-                    <h4>Lorem ipsum dolor sit amet</h4>
-                    <p class="text-justify">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse erat
-    tellus, feugiat et placerat in, facilisis eu mauris.
-                    </p>
-                </li>
-                <li>
-                    <h3>Desarrollo Web</h3>
-                    <p>
-    Sed pulvinar, ipsum in sollicitudin molestie, lacus nibh rutrum dui, sit amet
-    adipiscing neque tortor a neque. Nunc tellus arcu, porttitor quis scelerisque
-    viverra, semper ac neque.
-                    </p>
-                </li>
-                <li>
-                    <h3>Administración de Servicios</h3>
-                    <p>
-    Aliquam erat volutpat. Duis eget est eget orci vehicula pharetra. Pellentesque
-    pretium tempor dictum. Maecenas semper faucibus purus, interdum volutpat nunc
-    auctor consequat.
-                    </p>
-                </li>
+            <div class="large-4 columns">
+                <h4><a href="#">Seguridad Informática</a></h4>
+                <p class="text-justify">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed dolor nibh. In aliquet lobortis est. Etiam non ligula ut tortor interdum tristique. Fusce velit nulla, dapibus quis sapien non, lobortis semper elit. Pellentesque porttitor nec diam a iaculis.
+                </p>
             </div>
+            <div class="large-4 columns">
+                <h4><a href="#">Lorem ipsum dolor sit amet</a></h4>
+                <p class="text-justify">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed dolor nibh. In aliquet lobortis est. Etiam non ligula ut tortor interdum tristique. Fusce velit nulla, dapibus quis sapien non, lobortis semper elit. Pellentesque porttitor nec diam a iaculis.
+                </p>
+            </div>
+            <div class="large-4 columns">
+                <h4><a href="#">Lorem ipsum dolor sit amet</a></h4>
+                <p class="text-justify">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed dolor nibh. In aliquet lobortis est. Etiam non ligula ut tortor interdum tristique. Fusce velit nulla, dapibus quis sapien non, lobortis semper elit. Pellentesque porttitor nec diam a iaculis.
+                </p>
+            </div>
+            <div class="clear"></div>
         </div>
+
         <div id="box3"></div>
+        <div>
+            <h4 style="position:fixed;top:3.0em;left:1.0em;"
+                data-top="opacity:0;"
+                data--10p-top="opacity:1.0;"
+                data-anchor-target="#box3"
+            >
+                Seguridad Informática
+            </h4>
+            <p class="text-justify"
+                style="position:fixed;top:7.0em;left:1.0em;width:50vw;"
+                data-top="opacity:0;"
+                data--20p-top="opacity:1.0;"
+                data-anchor-target="#box3"
+            >
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed dolor nibh. In aliquet lobortis est. Etiam non ligula ut tortor interdum tristique. Fusce velit nulla, dapibus quis sapien non, lobortis semper elit. Pellentesque porttitor nec diam a iaculis.
+                </p>
+        </div>
+
+        <div id="boxM" data-4000="position:absolute;"></div>
 
         <!-- build:js scripts/vendor/vendor.js -->
         <!-- bower:js -->
