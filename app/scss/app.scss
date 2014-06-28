@@ -2,8 +2,8 @@
 @import "foundation";
 
 @mixin stretch { margin: 0; padding: 0; }
-@mixin wfull { width:100%; }
-@mixin hfull { height:100vh; }
+@mixin wfull { width: 100%; }
+@mixin hfull { height: 100vh; }
 
 .clear {
     clear: both;
@@ -14,12 +14,54 @@ $color_gray: #b3b3b3;
 
 $color_cyan: #4099BB;
 
+$rpm: 10;
+
+@mixin logo {
+    div.logo {
+        width: 18vw;
+        height: 18vw;
+        
+        img:nth-child(1) {
+            width: 100%;
+            height: 100%;
+            -skrollr-animation-name: animation1;
+            /*-skrollr-anchor-target: '#box3';*/
+        }
+        img:nth-child(2) {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            top: -100%;
+            -skrollr-animation-name: animation2;
+            /*-skrollr-anchor-target: '#box3';*/
+        }
+    }
+}
+
+@-skrollr-keyframes animation1 {
+    start {
+        transform: rotate(0deg);
+    }
+    end {
+        transform: rotate($rpm * 360deg);
+    }
+}
+
+@-skrollr-keyframes animation2 {
+    start {
+        transform: rotate(0deg);
+    }
+    end {
+        transform: rotate($rpm * -360deg);
+    }
+}
+
 #menubar {
     @include wfull;
     position: fixed;
     z-index: 99;
     top: -2.75em;
-    -skrollr-animation-name: animation1;
+    -skrollr-animation-name: animation3;
     -skrollr-anchor-target: '#box2';
 
     a {
@@ -34,7 +76,7 @@ $color_cyan: #4099BB;
     }
 }
 
-@-skrollr-keyframes animation1 {
+@-skrollr-keyframes animation3 {
     start {
         position: fixed;
         top: -2.75em;
@@ -45,8 +87,45 @@ $color_cyan: #4099BB;
     }
 }
 
+#footbar {
+    @include wfull;
+    position: fixed;
+    z-index: 90;
+    bottom: 0em;
+    /*height: 0em;*/
+    background-color: #00cc00;
+    -skrollr-animation-name: animation4;
+    -skrollr-anchor-target: '#box3';
+
+    @include logo;
+    div.logo {
+        position: relative;
+        left: 50vw;
+        margin-left: -9vw;
+        bottom: 9vw;
+        z-index: 89;
+    }
+}
+
+@-skrollr-keyframes animation4 {
+    start {
+        position: fixed;
+        bottom: -18vw;
+    }
+    top {
+        position: fixed;
+        bottom: 0vw;
+    }
+}
+
+#languages {
+    position: absolute;
+    top: 0.8em;
+    right: 1.8em;
+}
+
 #box1 {
-    background-image:url(../images/tile1.svg);
+    background-image: url(../images/tile1.svg);
     height: 60vh;
     @include wfull;
     margin-bottom: -3px;
@@ -56,47 +135,11 @@ $color_cyan: #4099BB;
     justify-content: center;
     align-items: center;
 
-    div.logo {
-        margin-right: 2vw;
-        width: 18vw;
-        height: 18vw;
-        
-        img:nth-child(1) {
-            width: 100%;
-            height: 100%;
-            -skrollr-animation-name: animation2;
-            -skrollr-anchor-target: '#box3';
-        }
-        img:nth-child(2) {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            top: -100%;
-            -skrollr-animation-name: animation3;
-            -skrollr-anchor-target: '#box3';
-        }
-    }
+    @include logo;
     div.text {
+        margin-left: 2vw;
         width: 64vw;
         height: auto;
-    }
-}
-
-@-skrollr-keyframes animation2 {
-    start {
-        transform: rotate(0deg);
-    }
-    top {
-        transform: rotate(360deg);
-    }
-}
-
-@-skrollr-keyframes animation3 {
-    start {
-        transform: rotate(0deg);
-    }
-    top {
-        transform: rotate(-360deg);
     }
 }
 
@@ -104,12 +147,16 @@ $color_cyan: #4099BB;
     @include wfull;
     box-shadow: 0em 0em 0.56em 0.05em #a0a0a0;
 
-    div.columns {
+    article {
         padding: 3.0em 1.6em 1.6em 1.6em;
+        div {
+            text-align: center;
+            padding-bottom: 2.0em;
+        }
     }
-    div:nth-child(1) { background-color: $color_cyan; }
-    div:nth-child(2) { background-color: darken($color_cyan, 10%); }
-    div:nth-child(3) { background-color: darken($color_cyan, 20%); }
+    article:nth-child(1) { background-color: $color_cyan; }
+    article:nth-child(2) { background-color: darken($color_cyan, 10%); }
+    article:nth-child(3) { background-color: darken($color_cyan, 20%); }
 
     h4 {
         a {
@@ -127,12 +174,11 @@ $color_cyan: #4099BB;
 
 #box3 {
     background-image:url(../images/tile2.svg);
-    height: 100vh;
     @include wfull;
-    -skrollr-animation-name: animation4;
+    padding: 3.0em 1.0em;
 }
 
-@-skrollr-keyframes animation4 {
+/*@-skrollr-keyframes animation4 {
     start {
         position: static;
     }
@@ -140,5 +186,5 @@ $color_cyan: #4099BB;
         position: fixed;
         top: 0;
     }
-}
+}*/
 
