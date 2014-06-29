@@ -1,0 +1,46 @@
+$rpm: 1;
+
+/* rotate the logo blue */
+@-skrollr-keyframes animation1 {
+    start {
+        transform: rotate(0deg);
+    }
+    top {
+        transform: rotate($rpm * 360deg);
+    }
+}
+
+/* rotate the logo gray */
+@-skrollr-keyframes animation2 {
+    start {
+        transform: rotate(0deg);
+    }
+    top {
+        transform: rotate($rpm * -360deg);
+    }
+}
+
+/* down the menubar */
+@-skrollr-keyframes animation3 {
+    start {
+        position: fixed;
+        top: -2.75em;
+    }
+    top {
+        position: fixed;
+        top: 0em;
+    }
+}
+
+/* up the footer bar */
+@-skrollr-keyframes animation4 {
+    start {
+        position: fixed;
+        bottom: -4.0em;
+    }
+    top {
+        position: fixed;
+        bottom: -0.2em;
+    }
+}
+

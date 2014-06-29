@@ -1,20 +1,17 @@
 @import "settings";
 @import "foundation";
+@import "_foundation-icons";
+@import "animation";
 
 @mixin stretch { margin: 0; padding: 0; }
 @mixin wfull { width: 100%; }
 @mixin hfull { height: 100vh; }
 
-.clear {
-    clear: both;
-}
+.clear { clear: both; }
 
 $color_blue: #002255;
 $color_gray: #b3b3b3;
-
 $color_cyan: #4099BB;
-
-$rpm: 10;
 
 @mixin logo {
     div.logo {
@@ -25,7 +22,7 @@ $rpm: 10;
             width: 100%;
             height: 100%;
             -skrollr-animation-name: animation1;
-            /*-skrollr-anchor-target: '#box3';*/
+            -skrollr-anchor-target: '#box3';
         }
         img:nth-child(2) {
             width: 100%;
@@ -33,26 +30,8 @@ $rpm: 10;
             position: relative;
             top: -100%;
             -skrollr-animation-name: animation2;
-            /*-skrollr-anchor-target: '#box3';*/
+            -skrollr-anchor-target: '#box3';
         }
-    }
-}
-
-@-skrollr-keyframes animation1 {
-    start {
-        transform: rotate(0deg);
-    }
-    end {
-        transform: rotate($rpm * 360deg);
-    }
-}
-
-@-skrollr-keyframes animation2 {
-    start {
-        transform: rotate(0deg);
-    }
-    end {
-        transform: rotate($rpm * -360deg);
     }
 }
 
@@ -76,52 +55,29 @@ $rpm: 10;
     }
 }
 
-@-skrollr-keyframes animation3 {
-    start {
-        position: fixed;
-        top: -2.75em;
-    }
-    top {
-        position: fixed;
-        top: 0em;
-    }
-}
-
 #footbar {
     @include wfull;
-    position: fixed;
+    /*position: fixed;*/
     z-index: 90;
     bottom: 0em;
-    /*height: 0em;*/
-    background-color: #00cc00;
     -skrollr-animation-name: animation4;
     -skrollr-anchor-target: '#box3';
 
-    @include logo;
-    div.logo {
-        position: relative;
-        left: 50vw;
-        margin-left: -9vw;
-        bottom: 9vw;
-        z-index: 89;
-    }
-}
-
-@-skrollr-keyframes animation4 {
-    start {
-        position: fixed;
-        bottom: -18vw;
-    }
-    top {
-        position: fixed;
-        bottom: 0vw;
+    a {
+        font-size: 24px;
+        color: #ffffff;
     }
 }
 
 #languages {
     position: absolute;
-    top: 0.8em;
-    right: 1.8em;
+    top: 0.2em;
+    right: 0.5rem;
+    ul {
+        li {
+            margin-left: 0.25rem;
+        }
+    }
 }
 
 #box1 {
@@ -177,14 +133,4 @@ $rpm: 10;
     @include wfull;
     padding: 3.0em 1.0em;
 }
-
-/*@-skrollr-keyframes animation4 {
-    start {
-        position: static;
-    }
-    top {
-        position: fixed;
-        top: 0;
-    }
-}*/
 
