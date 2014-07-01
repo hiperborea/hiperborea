@@ -48,7 +48,8 @@ module.exports = function (grunt) {
             ],
             server: [
                 'compass',
-                'copy:styles'
+                'copy:styles',
+                'copy:fonts'
             ]
         },
         
@@ -88,6 +89,13 @@ module.exports = function (grunt) {
                 src:    '{,*/}*.css'
             },
             fonts: {
+                expand: true,
+                dot:    true,
+                cwd:    'bower_components/foundation-icon-fonts',
+                dest:   '.tmp/styles',
+                src:    '*.{ttf,woff}'
+            },
+            distfonts: {
                 expand: true,
                 dot:    true,
                 cwd:    'bower_components/foundation-icon-fonts',
@@ -222,7 +230,7 @@ module.exports = function (grunt) {
                     livereload: false
                 }
             }
-        }
+        },
 
         watch: {
             compass: {
@@ -271,7 +279,7 @@ module.exports = function (grunt) {
         'uglify',
         'modernizr',
         'copy:dist',
-        'copy:fonts',
+        'copy:distfonts',
         'rev',
         'usemin'
     ]);
