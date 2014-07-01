@@ -27,7 +27,8 @@ module.exports = function (grunt) {
                         'dist/*'
                     ]
                 }]
-            }
+            },
+            server: '.tmp'
         },
 
         useminPrepare: {
@@ -44,6 +45,10 @@ module.exports = function (grunt) {
                 'imagemin',
                 'svgmin',
                 'htmlmin'
+            ],
+            server: [
+                'compass',
+                'copy:styles'
             ]
         },
         
@@ -65,6 +70,11 @@ module.exports = function (grunt) {
             dist: {
                 options: {
                     generatedImagesDir: 'dist/images/generated'
+                }
+            },
+            server: {
+                options: {
+                    debugInfo: true
                 }
             }
         },
@@ -180,18 +190,78 @@ module.exports = function (grunt) {
             },
             html: ['dist/{,*/}*.html'],
             css: ['dist/styles/{,*/}*.css']
+        },
+
+        connect: {
+            options: {
+                port: 9000,
+                livereload: 35729,
+                hostname: '0.0.0.0'
+            },
+            livereload: {
+                options: {
+                    open: true,
+                    base: [
+                        '.tmp',
+                        'app'
+                    ],
+                    middleware: function(connect) {
+                        return [
+                            connect().use('/bower_components',
+                                connect.static('bower_components')),
+                            connect.static('.tmp'),
+                            connect.static('app')
+                        ];
+                    }
+                }
+            },
+            dist: {
+                options: {
+                    open: true,
+                    base: 'dist',
+                    livereload: false
+                }
+            }
         }
 
-/*        'bower-install': {
-            app: {
-                html: '<%= yeoman.app %>/index.html',
-                ignorePath: '<%= yeoman.app %>/'
+        watch: {
+            compass: {
+                files: ['app/scss/{,*/}*.{scss,sass}'],
+                tasks: ['compass:server', 'autoprefixer']
+            },
+            styles: {
+                files: ['app/styles/{,*/}*.{scss,sass}'],
+                tasks: ['newer:copy:styles', 'autoprefixer']
+            },
+            livereload: {
+                options: {
+                    livereload: '<%= connect.options.livereload %>'
+                },
+                files: [
+                    'app/*.html',
+                    '.tmp/styles/{,*/}*.css',
+                    '{.tmp,app}/scripts/{,*/}*.js',
+                    'app/images/{,*/}*.{gif,jpeg,jpg,png,svg,webp}'
+                ]
             }
-        },*/
+        }
     });
 
-    grunt.registerTask('default', [
-        'jshint',
+    grunt.registerTask('serve', function(target) {
+        if (target === 'dist') {
+            return grunt.task.run(['build', 'connect:dist:keepalive']);
+        }
+
+        grunt.task.run([
+            'clean:server',
+            'concurrent:server',
+            'autoprefixer',
+            'connect:livereload',
+            'watch'
+        ]);
+    });
+
+    grunt.registerTask('build', [
         'clean:dist',
         'useminPrepare',
         'concurrent:dist',
@@ -204,6 +274,11 @@ module.exports = function (grunt) {
         'copy:fonts',
         'rev',
         'usemin'
+    ]);
+
+    grunt.registerTask('default', [
+        'jshint',
+        'build'
     ]);
 };
 
