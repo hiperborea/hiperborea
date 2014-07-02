@@ -142,8 +142,7 @@ module.exports = function (grunt) {
 
         htmlmin: {
             dist: {
-                options: {
-                },
+                options: {},
                 files: [{
                     expand: true,
                     cwd: 'app',

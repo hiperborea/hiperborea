@@ -1,12 +1,10 @@
-$rpm: 1;
-
 /* rotate the logo blue */
 @-skrollr-keyframes animation1 {
     start {
         transform: rotate(0deg);
     }
     top {
-        transform: rotate($rpm * 360deg);
+        transform: rotate(360deg);
     }
 }
 
@@ -16,7 +14,7 @@ $rpm: 1;
         transform: rotate(0deg);
     }
     top {
-        transform: rotate($rpm * -360deg);
+        transform: rotate(-360deg);
     }
 }
 
