@@ -3,7 +3,6 @@
 @import "_foundation-icons";
 @import "animation.scss";
 
-@mixin stretch { margin: 0; padding: 0; }
 @mixin wfull { width: 100%; }
 @mixin hfull { height: 100vh; }
 
@@ -105,9 +104,13 @@ $color_cyan: #4099BB;
 
     article {
         padding: 3.0em 1.6em 1.6em 1.6em;
-        div {
+        div.icon {
             text-align: center;
             padding-bottom: 2.0em;
+            a {
+                font-size: 48px;
+                color: #ffffff;
+            }
         }
     }
     article:nth-child(1) { background-color: $color_cyan; }
@@ -115,6 +118,7 @@ $color_cyan: #4099BB;
     article:nth-child(3) { background-color: darken($color_cyan, 20%); }
 
     h4 {
+        text-align: center;
         a {
             color: #ffffff;
             text-shadow: 1px 1px 1px #606060;
@@ -129,6 +133,12 @@ $color_cyan: #4099BB;
 }
 
 #box3 {
+    background-image:url(../images/tile2.svg);
+    @include wfull;
+    padding: 3.0em 1.0em;
+}
+
+#box4 {
     background-image:url(../images/tile2.svg);
     @include wfull;
     padding: 3.0em 1.0em;

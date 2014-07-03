@@ -1,0 +1,29 @@
+@import "settings";
+@import "foundation";
+@import "_foundation-icons";
+
+@mixin wfull { width: 100%; }
+@mixin hfull { height: 100vh; }
+
+.clear { clear: both; }
+
+$color_blue: #002255;
+$color_gray: #b3b3b3;
+$color_cyan: #4099BB;
+
+#menubar {
+    @include wfull;
+    position: fixed;
+
+    a {
+        outline: 0;
+        &:focus {
+            background-color: darken($color_blue, 10%);
+        }
+    }
+    img.logo {
+        height: 2.45em;
+        width: auto;
+    }
+}
+
