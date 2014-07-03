@@ -54,20 +54,6 @@ $color_cyan: #4099BB;
     }
 }
 
-#footbar {
-    @include wfull;
-    /*position: fixed;*/
-    z-index: 90;
-    bottom: 0em;
-    -skrollr-animation-name: animation4;
-    -skrollr-anchor-target: '#box3';
-
-    a {
-        font-size: 24px;
-        color: #ffffff;
-    }
-}
-
 #languages {
     position: absolute;
     top: 0.2em;
@@ -99,48 +85,50 @@ $color_cyan: #4099BB;
 }
 
 #box2 {
+    background-image: url(../images/tile2.svg);
     @include wfull;
-    box-shadow: 0em 0em 0.56em 0.05em #a0a0a0;
 
     article {
-        padding: 3.0em 1.6em 1.6em 1.6em;
-        div.icon {
-            text-align: center;
-            padding-bottom: 2.0em;
-            a {
-                font-size: 48px;
-                color: #ffffff;
-            }
-        }
-    }
-    article:nth-child(1) { background-color: $color_cyan; }
-    article:nth-child(2) { background-color: darken($color_cyan, 10%); }
-    article:nth-child(3) { background-color: darken($color_cyan, 20%); }
+        padding: 0rem;
 
-    h4 {
-        text-align: center;
-        a {
-            color: #ffffff;
-            text-shadow: 1px 1px 1px #606060;
-            &:hover {
-                text-decoration: underline;
+        div.title {
+            text-align: center;
+            padding: 1.0rem 0rem;
+            box-shadow: 0em 0em 0.56em 0.05em #a0a0a0;
+
+            div.icon {
+                padding: 1.0rem 0rem;
+            }
+            h4 {
+                a {
+                    color: #ffffff;
+                    text-shadow: 1px 1px 1px #606060;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
             }
         }
+        p {
+            padding: 0.75rem 0.75rem 0rem 0.75rem;
+        }
     }
-    p {
-        color: #ffffff;
+
+    article:nth-child(1)>div.title {
+        background-color: $color_cyan;
+    }
+    article:nth-child(2)>div.title {
+        background-color: darken($color_cyan, 10%);
+    }
+    article:nth-child(3)>div.title {
+        background-color: darken($color_cyan, 20%);
     }
 }
 
 #box3 {
-    background-image:url(../images/tile2.svg);
+    background-color: #000000;
     @include wfull;
-    padding: 3.0em 1.0em;
-}
-
-#box4 {
-    background-image:url(../images/tile2.svg);
-    @include wfull;
-    padding: 3.0em 1.0em;
+    height: 1.0rem;
+    padding: 1.0em 1.0em;
 }
 
