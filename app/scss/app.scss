@@ -16,7 +16,6 @@ $color_cyan: #4099BB;
     div.logo {
         width: 18vw;
         height: 18vw;
-        
         img:nth-child(1) {
             width: 100%;
             height: 100%;
@@ -41,7 +40,6 @@ $color_cyan: #4099BB;
     top: -2.75em;
     -skrollr-animation-name: animation3;
     -skrollr-anchor-target: '#box2';
-
     a {
         outline: 0;
         &:focus {
@@ -54,81 +52,104 @@ $color_cyan: #4099BB;
     }
 }
 
-#languages {
-    position: absolute;
-    top: 0.2em;
-    right: 0.5rem;
-    ul {
-        li {
-            margin-left: 0.25rem;
-        }
-    }
-}
-
 #box1 {
     background-image: url(../images/tile1.svg);
-    height: 60vh;
-    @include wfull;
-    margin-bottom: -3px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    @include logo;
-    div.text {
-        margin-left: 2vw;
-        width: 64vw;
-        height: auto;
+    >div:nth-child(1) {
+        position: absolute;
+        top: 1.0rem;
+        right: 1.0rem;
+        ul {
+            li {
+                margin-left: 1.0rem;
+            }
+        }
+    }
+    >div:nth-child(2) {
+        height: 80vh;
+        @include wfull;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        @include logo;
+        div.text {
+            margin-left: 2vw;
+            width: 64vw;
+            height: auto;
+        }
     }
 }
 
 #box2 {
-    background-image: url(../images/tile2.svg);
+    background-image: url(../images/tile1.svg);
+    box-shadow: 0px 10px 16px 10px #000000;
     @include wfull;
-
     article {
         padding: 0rem;
-
-        div.title {
-            text-align: center;
-            padding: 1.0rem 0rem;
-            box-shadow: 0em 0em 0.56em 0.05em #a0a0a0;
-
-            div.icon {
-                padding: 1.0rem 0rem;
+        >div.title {
+            height: 20vh;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: stretch;
+            align-items: center;
+            h2 {
+                color: #ffffff;
             }
-            h4 {
-                a {
-                    color: #ffffff;
-                    text-shadow: 1px 1px 1px #606060;
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
+            img {
+                height: 55%;
+                width: auto;
             }
         }
         p {
-            padding: 0.75rem 0.75rem 0rem 0.75rem;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
         }
     }
-
-    article:nth-child(1)>div.title {
+    >article:nth-child(1)>div.title {
         background-color: $color_cyan;
     }
-    article:nth-child(2)>div.title {
+    >article:nth-child(2)>div.title {
         background-color: darken($color_cyan, 10%);
     }
-    article:nth-child(3)>div.title {
+    >article:nth-child(3)>div.title {
         background-color: darken($color_cyan, 20%);
     }
 }
 
+.slide {
+    background-attachment: fixed;
+    >.anchor {
+        height: 5vh;
+        width: 5vh;
+        background-color: #000000;
+    }
+}
+
+@mixin separator($color) {
+    .separator {
+        height: 18px;
+        background-image: linear-gradient(
+            to bottom, lighten($color, 30%) 0%, $color 100%);
+    }
+}
+
+@mixin slide($image) {
+    .slide {
+        background-image: url($image);
+    }
+}
+
 #box3 {
-    background-color: #000000;
     @include wfull;
-    height: 1.0rem;
-    padding: 1.0em 1.0em;
+    @include separator($color_cyan);
+    @include slide('http://lorempixel.com/200/200');
+}
+
+#box4 {
+    @include wfull;
+    @include separator(darken($color_cyan, 10%));
+    @include slide('http://lorempixel.com/200/400');
 }
 
