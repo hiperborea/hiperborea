@@ -38,7 +38,7 @@
     top {
         opacity: 0;
     }
-    -200-top {
+    -300-top {
         opacity: 1;
     }
 }
@@ -47,16 +47,36 @@
     start {
         opacity: 0;
     }
-    top {
+    -650-top {
         opacity: 0;
     }
-    -220-top {
+    -1220-top {
         opacity: 1;
     }
-    -300-top {
+    -1300-top {
+        padding-top: 0rem;
+        opacity: 1;
+    }
+    -1600-top {
+        padding-top: 60vh;
+        opacity: 0;
+    }
+}
+
+@-skrollr-keyframes animation6 {
+    start {
+        opacity: 0;
+    }
+    -1500-top {
+        opacity: 0;
+    }
+    -1600-top {
+        opacity: 1;
+    }
+    -2400-top {
         padding-top: 0rem;
     }
-    -600-top {
+    -2700-top {
         padding-top: 30rem;
     }
 }

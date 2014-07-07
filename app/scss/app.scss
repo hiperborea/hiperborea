@@ -146,7 +146,7 @@ $color_cyan: #4099BB;
     @include separator($color_cyan);
     @include slide($color, $image);
     :nth-child(2) {
-        height: 1900px;
+        height: 4900px;
     }
     :nth-child(3) {
         position: fixed;
@@ -156,7 +156,6 @@ $color_cyan: #4099BB;
         h1 {
             text-align: center;
             color: #ffcc00;
-            -skrollr-animation-name: animation4;
             -skrollr-anchor-target: '#box3>:nth-child(2)';
         }
         p {
@@ -165,9 +164,12 @@ $color_cyan: #4099BB;
             padding: 0rem 0.5rem;
             max-width: 480px;
             margin: 0 auto;
-            -skrollr-animation-name: animation5;
+            margin-top: 2.5rem;
             -skrollr-anchor-target: '#box3>:nth-child(2)';
         }
+        :nth-child(1) { -skrollr-animation-name: animation4; }
+        :nth-child(2) { -skrollr-animation-name: animation5; }
+        :nth-child(3) { -skrollr-animation-name: animation6; }
     }
 }
 

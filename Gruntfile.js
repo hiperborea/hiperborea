@@ -152,7 +152,7 @@ module.exports = function (grunt) {
             }
         },
 
-        autoprefixer: {
+        /*autoprefixer: {
             options: {
                 browsers: ['last 1 version']
             },
@@ -160,11 +160,11 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: '.tmp/styles/',
-                    src: '{,*/}*.css',
+                    src: '{,*-/}*.css',
                     dest: '.tmp/styles/'
                 }]
             }
-        },
+        },*/
         
         cssmin: {},
 
@@ -234,11 +234,11 @@ module.exports = function (grunt) {
         watch: {
             compass: {
                 files: ['app/scss/{,*/}*.{scss,sass}'],
-                tasks: ['compass:server', 'autoprefixer']
+                tasks: ['compass:server'/*, 'autoprefixer'*/]
             },
             styles: {
                 files: ['app/styles/{,*/}*.{scss,sass}'],
-                tasks: ['newer:copy:styles', 'autoprefixer']
+                tasks: ['newer:copy:styles'/*, 'autoprefixer'*/]
             },
             livereload: {
                 options: {
@@ -262,7 +262,7 @@ module.exports = function (grunt) {
         grunt.task.run([
             'clean:server',
             'concurrent:server',
-            'autoprefixer',
+            /*'autoprefixer',*/
             'connect:livereload',
             'watch'
         ]);
@@ -272,7 +272,7 @@ module.exports = function (grunt) {
         'clean:dist',
         'useminPrepare',
         'concurrent:dist',
-        'autoprefixer',
+        /*'autoprefixer',*/
         'concat',
         'cssmin',
         'uglify',
