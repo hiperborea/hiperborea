@@ -30,15 +30,34 @@
     }
 }
 
-/* up the footer bar */
+/* slide 1: effects in text */
 @-skrollr-keyframes animation4 {
     start {
-        position: fixed;
-        bottom: -4.0em;
+        opacity: 0;
     }
     top {
-        position: fixed;
-        bottom: -0.2em;
+        opacity: 0;
+    }
+    -200-top {
+        opacity: 1;
+    }
+}
+
+@-skrollr-keyframes animation5 {
+    start {
+        opacity: 0;
+    }
+    top {
+        opacity: 0;
+    }
+    -220-top {
+        opacity: 1;
+    }
+    -300-top {
+        padding-top: 0rem;
+    }
+    -600-top {
+        padding-top: 30rem;
     }
 }
 
