@@ -10,7 +10,10 @@
 
 $color_blue: #002255;
 $color_gray: #b3b3b3;
-$color_cyan: #4099BB;
+
+$color_cyan1: #4099BB;
+$color_cyan2: darken($color_cyan1, 10%);
+$color_cyan3: darken($color_cyan2, 10%);
 
 @mixin logo {
     div.logo {
@@ -114,19 +117,19 @@ $color_cyan: #4099BB;
         }
     }
     >article:nth-child(1)>div.title {
-        background-color: $color_cyan;
+        background-color: $color_cyan1;
     }
     >article:nth-child(2)>div.title {
-        background-color: darken($color_cyan, 10%);
+        background-color: $color_cyan2;
     }
     >article:nth-child(3)>div.title {
-        background-color: darken($color_cyan, 20%);
+        background-color: $color_cyan3;
     }
 }
 
 @mixin separator($color) {
     .separator {
-        height: 4px;
+        height: 1.0rem;
         background-color: $color;
     }
 }
@@ -145,33 +148,52 @@ $color_cyan: #4099BB;
     $color: #000000;
     $image: url(../images/background1.svg);
     @include wfull;
-    @include separator($color_cyan);
+    @include separator($color_cyan1);
     @include slide($color, $image);
-/*    :nth-child(2) {
-        height: 4900px;
-    }*/
-    :nth-child(3) {
+    >.slide {
+        height: 1000px;
+    }
+    >.wrapper {
         position: fixed;
         top: 45px;
         left: 0;
         right: 0;
-        h2 {
-            text-align: center;
-            color: #ffcc00;
-            -skrollr-anchor-target: '#box3>:nth-child(2)';
-        }
-        p {
-            color: #ffffff;
-            text-align: justify;
-            padding: 0rem 0.5rem;
+        bottom: 0;
+        >.wrapper {
             max-width: 480px;
             margin: 0 auto;
-            margin-top: 0rem;
-//            -skrollr-anchor-target: '#box3>:nth-child(2)';
+            h2 {
+                color: #ffcc00;
+                text-align: center;
+                -skrollr-anchor-target: '#box3>.slide';
+                -skrollr-animation-name: animation4;
+            }
+            p {
+                color: #ffffff;
+                -skrollr-anchor-target: '#box3>.slide';
+            }
+            p:nth-child(2) { -skrollr-animation-name: animation5; }
+            p:nth-child(3) { -skrollr-animation-name: animation6; }
         }
-//        :nth-child(1) { -skrollr-animation-name: animation4; }
-//        :nth-child(2) { -skrollr-animation-name: animation5; }
-//        :nth-child(3) { -skrollr-animation-name: animation6; }
+    }
+}
+
+#box4 {
+    $color: #000000;
+    $image: url(../images/background2.svg);
+    @include wfull;
+    @include separator($color_cyan2);
+    @include slide($color, $image);
+    >.slide {
+        height: 1000px;
+    }
+    >.wrapper {
+        position: fixed;
+        top: 45px;
+        >.wrapper {
+            max-width: 480px;
+            margin: 0 auto;
+        }
     }
 }
 

@@ -38,7 +38,7 @@
     top {
         opacity: 0;
     }
-    -300-top {
+    -360-top {
         opacity: 1;
     }
 }
@@ -53,13 +53,18 @@
     -1220-top {
         opacity: 1;
     }
-    -1300-top {
+    -1500-top {
         padding-top: 0rem;
         opacity: 1;
+        display: inline;
     }
-    -1600-top {
+    -1700-top {
         padding-top: 60vh;
         opacity: 0;
+        display: inline;
+    }
+    -1800-top {
+        display: none;
     }
 }
 
@@ -70,7 +75,7 @@
     -1500-top {
         opacity: 0;
     }
-    -1600-top {
+/*    -1600-top {
         opacity: 1;
     }
     -2400-top {
@@ -80,6 +85,6 @@
     -2700-top {
         padding-top: 60vh;
         opacity: 0;
-    }
+    }*/
 }
 
