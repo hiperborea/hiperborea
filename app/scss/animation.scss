@@ -75,9 +75,11 @@
     }
     -2400-top {
         padding-top: 0rem;
+        opacity: 1;
     }
     -2700-top {
-        padding-top: 30rem;
+        padding-top: 60vh;
+        opacity: 0;
     }
 }
 

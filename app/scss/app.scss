@@ -60,12 +60,12 @@ $color_cyan: #4099BB;
         right: 1.0rem;
         ul {
             li {
-                margin-left: 1.0rem;
+                margin-left: 0.25rem;
             }
         }
     }
     >div:nth-child(2) {
-        height: 80vh;
+        height: 66vh;
         @include wfull;
         display: flex;
         flex-direction: row;
@@ -90,14 +90,16 @@ $color_cyan: #4099BB;
             border-image: url(../images/tile2.svg) 17 0 0 0 repeat;
             border-style: solid;
             border-width: 10px 0px;
-            height: 20vh;
+            height: 34vh;
+            padding-top: 16px;
+            padding-bottom: -8px;
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
             justify-content: center;
             align-content: stretch;
             align-items: center;
-            h2 {
+            h3 {
                 color: #ffffff;
             }
             img {
@@ -107,8 +109,8 @@ $color_cyan: #4099BB;
         }
         p {
             padding-top: 0.5rem;
-            padding-left: 0.5rem;
-            padding-right: 0.5rem;
+            padding-left: 0.75rem;
+            padding-right: 0.75rem;
         }
     }
     >article:nth-child(1)>div.title {
@@ -145,15 +147,15 @@ $color_cyan: #4099BB;
     @include wfull;
     @include separator($color_cyan);
     @include slide($color, $image);
-    :nth-child(2) {
+/*    :nth-child(2) {
         height: 4900px;
-    }
+    }*/
     :nth-child(3) {
         position: fixed;
         top: 45px;
         left: 0;
         right: 0;
-        h1 {
+        h2 {
             text-align: center;
             color: #ffcc00;
             -skrollr-anchor-target: '#box3>:nth-child(2)';
@@ -164,12 +166,12 @@ $color_cyan: #4099BB;
             padding: 0rem 0.5rem;
             max-width: 480px;
             margin: 0 auto;
-            margin-top: 2.5rem;
-            -skrollr-anchor-target: '#box3>:nth-child(2)';
+            margin-top: 0rem;
+//            -skrollr-anchor-target: '#box3>:nth-child(2)';
         }
-        :nth-child(1) { -skrollr-animation-name: animation4; }
-        :nth-child(2) { -skrollr-animation-name: animation5; }
-        :nth-child(3) { -skrollr-animation-name: animation6; }
+//        :nth-child(1) { -skrollr-animation-name: animation4; }
+//        :nth-child(2) { -skrollr-animation-name: animation5; }
+//        :nth-child(3) { -skrollr-animation-name: animation6; }
     }
 }
 
