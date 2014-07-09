@@ -81,15 +81,31 @@ $color_cyan3: darken($color_cyan2, 10%);
     }
 }
 
+@mixin border1($top, $bottom) {
+    border-image: url(../images/tile2.svg) $top 0 $bottom 0 repeat;
+    border-style: solid;
+    border-width: 10px 0px;
+}
+@mixin border2($color) {
+    >div.title {
+        background-color: $color;
+    }
+    >.panel {
+        @include border1(0, 17);
+        background-color: lighten($color, 40%);
+        >a.button {
+            background-color: $color;
+        }
+    }
+}
+
 #box2 {
     background-image: url(../images/tile1.svg);
     @include wfull;
     article {
         padding: 0rem;
         >div.title {
-            border-image: url(../images/tile2.svg) 17 0 0 0 repeat;
-            border-style: solid;
-            border-width: 10px 0px;
+            @include border1(17, 0);
             height: 34vh;
             padding-top: 16px;
             padding-bottom: -8px;
@@ -113,15 +129,9 @@ $color_cyan3: darken($color_cyan2, 10%);
             padding-right: 0.75rem;
         }
     }
-    >article:nth-child(1)>div.title {
-        background-color: $color_cyan1;
-    }
-    >article:nth-child(2)>div.title {
-        background-color: $color_cyan2;
-    }
-    >article:nth-child(3)>div.title {
-        background-color: $color_cyan3;
-    }
+    >article:nth-child(1) { @include border2($color_cyan1); }
+    >article:nth-child(2) { @include border2($color_cyan2); }
+    >article:nth-child(3) { @include border2($color_cyan3); }
 }
 
 @mixin separator($color) {
@@ -139,7 +149,7 @@ $color_cyan3: darken($color_cyan2, 10%);
     background-size: cover;
 }
 
-@mixin box($color, $image, $height) {
+@mixin box($color, $image, $height, $target) {
     @include wfull;
     @include separator($color);
     >.landscape {
@@ -163,7 +173,7 @@ $color_cyan3: darken($color_cyan2, 10%);
             flex: 0 1 auto;
             align-self: auto;
             max-width: 960px;
-            -skrollr-anchor-target: '#box4>.landscape';
+            -skrollr-anchor-target: $target;
             p {
                 font-size: 120%;
                 padding: 0 1.0rem;
@@ -184,18 +194,18 @@ $color_cyan3: darken($color_cyan2, 10%);
 #box3 {
     $color: #000000;
     $image: url(../images/background1.svg);
-    @include box($color_cyan1, $image, 3000px);
+    @include box($color_cyan1, $image, 3000px, '#box3>.landscape');
 }
 
 #box4 {
     $color: #000000;
     $image: url(../images/background2.svg);
-    @include box($color_cyan2, $image, 3000px);
+    @include box($color_cyan2, $image, 3000px, '#box4>.landscape');
 }
 
 #box5 {
     $color: #000000;
     $image: url(../images/background3.svg);
-    @include box($color_cyan3, $image, 3000px);
+    @include box($color_cyan3, $image, 3000px, '#box5>.landscape');
 }
 
