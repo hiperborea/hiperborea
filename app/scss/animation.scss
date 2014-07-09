@@ -1,90 +1,46 @@
-/* rotate the logo blue */
-@-skrollr-keyframes animation1 {
-    start {
-        transform: rotate(0deg);
-    }
-    top {
-        transform: rotate(360deg);
-    }
+/* rotate the logo */
+@mixin rotation1($start, $end) {
+    start { transform: rotate($start); }
+    end {   transform: rotate($end);   }
 }
 
-/* rotate the logo gray */
-@-skrollr-keyframes animation2 {
-    start {
-        transform: rotate(0deg);
-    }
-    top {
-        transform: rotate(-360deg);
-    }
-}
+@-skrollr-keyframes animation1 { @include rotation1(0deg, 3600deg); }
+@-skrollr-keyframes animation2 { @include rotation1(0deg, -3600deg); }
 
 /* down the menubar */
 @-skrollr-keyframes animation3 {
-    start {
-        position: fixed;
-        top: -2.75em;
-    }
-    top {
-        position: fixed;
-        top: 0em;
-    }
+    start { top: -45px; }
+    top {   top: 0px; }
 }
 
 /* slide 1: effects in text */
 @-skrollr-keyframes animation4 {
-    start {
-        opacity: 0;
-    }
-    top {
-        opacity: 0;
-    }
-    -360-top {
-        opacity: 1;
-    }
+    start {     opacity: 0;
+                display: none; }
+    360-top {   opacity: 0;
+                display: inline-block;}
+    top {       opacity: 1; }
+    -720-top {  opacity: 0; }
+    -1080-top { display: none; }
 }
 
 @-skrollr-keyframes animation5 {
-    start {
-        opacity: 0;
-    }
-    -650-top {
-        opacity: 0;
-    }
-    -1220-top {
-        opacity: 1;
-    }
-    -1500-top {
-        padding-top: 0rem;
-        opacity: 1;
-        display: inline;
-    }
-    -1700-top {
-        padding-top: 60vh;
-        opacity: 0;
-        display: inline;
-    }
-    -1800-top {
-        display: none;
-    }
+    start {     opacity: 0;
+                display: none; }
+    -1080-top { opacity: 0;
+                display: inline-block; }
+    -1440-top { opacity: 1; }
+    -2160-top { opacity: 0; }
+    -2520-top { display: none; }
 }
 
 @-skrollr-keyframes animation6 {
-    start {
-        opacity: 0;
-    }
-    -1500-top {
-        opacity: 0;
-    }
-/*    -1600-top {
-        opacity: 1;
-    }
-    -2400-top {
-        padding-top: 0rem;
-        opacity: 1;
-    }
-    -2700-top {
-        padding-top: 60vh;
-        opacity: 0;
-    }*/
+    start {     opacity: 0;
+                display: none; }
+    -2700-top { opacity: 0;
+                display: inline-block; }
+    -2900-top { opacity: 1; }
+    -3010-top { opacity: 0; }
+    -3040-top { display: none; }
 }
 
