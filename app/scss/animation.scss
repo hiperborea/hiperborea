@@ -13,34 +13,16 @@
     top {   top: 0px; }
 }
 
-/* slide 1: effects in text */
-@-skrollr-keyframes animation4 {
-    start {     opacity: 0;
-                display: none; }
-    360-top {   opacity: 0;
-                display: inline-block;}
-    top {       opacity: 1; }
-    -720-top {  opacity: 0; }
-    -1080-top { display: none; }
+/* box: effects in slideshow */
+@mixin slides($x, $h, $s) {
+    start {               opacity: 0; display: none; }
+    -#{$x}-top {          opacity: 0; display: inline-block;}
+    -#{$x+$h}-top {       opacity: 1; display: inline-block; }
+    -#{$x+$h+$s}-top {    opacity: 1; display: inline-block; }
+    -#{$x+$h+$s+$h}-top { opacity: 0; display: none; }
 }
 
-@-skrollr-keyframes animation5 {
-    start {     opacity: 0;
-                display: none; }
-    -1080-top { opacity: 0;
-                display: inline-block; }
-    -1440-top { opacity: 1; }
-    -2160-top { opacity: 0; }
-    -2520-top { display: none; }
-}
-
-@-skrollr-keyframes animation6 {
-    start {     opacity: 0;
-                display: none; }
-    -2700-top { opacity: 0;
-                display: inline-block; }
-    -2900-top { opacity: 1; }
-    -3010-top { opacity: 0; }
-    -3040-top { display: none; }
-}
+@-skrollr-keyframes animation4 { @include slides(   0, 200, 200); }
+@-skrollr-keyframes animation5 { @include slides( 600, 200, 200); }
+@-skrollr-keyframes animation6 { @include slides(1200, 200, 200); }
 
