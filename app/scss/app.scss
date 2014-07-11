@@ -194,10 +194,14 @@ $color_cyan3: darken($color_cyan2, 10%);
 #box3 {
     $color: #000000;
     $image: url(../images/background1.svg);
+<<<<<<< HEAD
     @include box($color_cyan1, $image, 5000px, '#box3>.landscape');
     p {
         color: #ffffff;
     }
+=======
+    @include box($color_cyan1, $image, 3000px, '#box3>.landscape');
+>>>>>>> 75103cbbf09549fe0ba95e64f53e17a2222757c0
 }
 
 #box4 {
