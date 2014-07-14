@@ -231,6 +231,6 @@ footer {
 #box5 {
     $color: #000000;
     $image: none;
-    @include box($color_cyan3, $image, 3000px, '#box5>.landscape');
+    @include box($color_cyan3, $image, 1800px, '#box5>.landscape');
 }
 
