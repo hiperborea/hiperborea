@@ -62,10 +62,22 @@ footer {
         color: #ffffff;
         font-size: 3.0rem;
     }
+    >.border {
+        position: relative;
+        top: -46px;
+        z-index: -2;
+        left: 0;
+        right: 0;
+        border-image: url(../images/logo.svg) 128 0 0 0 repeat;
+        border-style: solid;
+        border-width: 64px 0px;
+        margin-bottom: -108px;
+    }
 }
 
 #box1 {
     background-image: url(../images/tile1.svg);
+    background-attachment: fixed;
     >div:nth-child(1) {
         position: absolute;
         top: 1.0rem;
@@ -112,6 +124,7 @@ footer {
 
 #box2 {
     background-image: url(../images/tile1.svg);
+    background-attachment: fixed;
     @include wfull;
     article {
         padding: 0rem;
@@ -147,7 +160,7 @@ footer {
 
 @mixin separator($color) {
     .separator {
-        height: 1.0rem;
+        height: 0.4rem;
         background-color: $color;
     }
 }
