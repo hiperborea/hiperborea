@@ -22,7 +22,10 @@
     -#{$x+$h+$s+$h}-top { opacity: 0; display: none; }
 }
 
-@-skrollr-keyframes animation4 { @include slides(   0, 200, 200); }
-@-skrollr-keyframes animation5 { @include slides( 600, 200, 200); }
-@-skrollr-keyframes animation6 { @include slides(1200, 200, 200); }
+@-skrollr-keyframes slide1 { @include slides(   0, 200, 200); }
+@-skrollr-keyframes slide2 { @include slides( 600, 200, 200); }
+@-skrollr-keyframes slide3 { @include slides(1200, 200, 200); }
+@-skrollr-keyframes slide4 { @include slides(1800, 200, 200); }
+@-skrollr-keyframes slide5 { @include slides(2400, 200, 200); }
+@-skrollr-keyframes slide6 { @include slides(3000, 200, 200); }
 

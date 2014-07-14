@@ -53,6 +53,17 @@ $color_cyan3: darken($color_cyan2, 10%);
     }
 }
 
+footer {
+    background-color: $color_blue;
+    color: #ffffff;
+    padding: 1.0rem 0rem;
+    h3 { color: inherit; }
+    .icon {
+        color: #ffffff;
+        font-size: 3.0rem;
+    }
+}
+
 #box1 {
     background-image: url(../images/tile1.svg);
     >div:nth-child(1) {
@@ -143,10 +154,10 @@ $color_cyan3: darken($color_cyan2, 10%);
 
 @mixin landscape($image) {
     background-image: $image;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: center bottom;
     background-attachment: fixed;
-    background-size: cover;
+    /*background-size: cover;*/
 }
 
 @mixin box($color, $image, $height, $target) {
@@ -175,44 +186,38 @@ $color_cyan3: darken($color_cyan2, 10%);
             max-width: 960px;
             -skrollr-anchor-target: $target;
             p {
-                font-size: 120%;
+                font-size: 146%;
                 padding: 0 1.0rem;
             }
         }
-        >.slide:nth-child(1) {
-            -skrollr-animation-name: animation4;
-        }
-        >.slide:nth-child(2) {
-            -skrollr-animation-name: animation5;
-        }
-        >.slide:nth-child(3) {
-            -skrollr-animation-name: animation6;
-        }
+        >.slide:nth-child(1) { -skrollr-animation-name: slide1; }
+        >.slide:nth-child(2) { -skrollr-animation-name: slide2; }
+        >.slide:nth-child(3) { -skrollr-animation-name: slide3; }
+        >.slide:nth-child(4) { -skrollr-animation-name: slide4; }
+        >.slide:nth-child(5) { -skrollr-animation-name: slide5; }
+        >.slide:nth-child(6) { -skrollr-animation-name: slide6; }
+    }
+    >.flow {
+        @include landscape($image);
     }
 }
 
 #box3 {
     $color: #000000;
-    $image: url(../images/background1.svg);
-<<<<<<< HEAD
-    @include box($color_cyan1, $image, 5000px, '#box3>.landscape');
-    p {
-        color: #ffffff;
-    }
-=======
+    $image: none;
     @include box($color_cyan1, $image, 3000px, '#box3>.landscape');
->>>>>>> 75103cbbf09549fe0ba95e64f53e17a2222757c0
+    /*p, li { color: #ffffff; }*/
 }
 
 #box4 {
     $color: #000000;
-    $image: url(../images/background2.svg);
-    @include box($color_cyan2, $image, 3000px, '#box4>.landscape');
+    $image: url(../images/tile1.svg);
+    @include box($color_cyan2, $image, 4000px, '#box4>.landscape');
 }
 
 #box5 {
     $color: #000000;
-    $image: url(../images/background3.svg);
+    $image: none;
     @include box($color_cyan3, $image, 3000px, '#box5>.landscape');
 }
 
