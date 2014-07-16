@@ -10,6 +10,7 @@
 
 $color_blue: #002255;
 $color_gray: #b3b3b3;
+$color_black: #404040;
 
 $color_cyan1: #4099BB;
 $color_cyan2: darken($color_cyan1, 10%);
@@ -68,7 +69,7 @@ footer {
         z-index: -2;
         left: 0;
         right: 0;
-        border-image: url(../images/logo.svg) 128 0 0 0 repeat;
+        border-image: url(../images/border1.svg) 17 0 0 0 repeat;
         border-style: solid;
         border-width: 64px 0px;
         margin-bottom: -108px;
@@ -89,7 +90,7 @@ footer {
         }
     }
     >div:nth-child(2) {
-        height: 66vh;
+        height: 70vh;
         @include wfull;
         display: flex;
         flex-direction: row;
@@ -105,7 +106,7 @@ footer {
 }
 
 @mixin border1($top, $bottom) {
-    border-image: url(../images/tile2.svg) $top 0 $bottom 0 repeat;
+    border-image: url(../images/border1.svg) $top 0 $bottom 0 repeat;
     border-style: solid;
     border-width: 10px 0px;
 }
@@ -115,6 +116,7 @@ footer {
     }
     >.panel {
         @include border1(0, 17);
+        padding: 0.6rem;
         background-color: lighten($color, 40%);
         >a.button {
             background-color: $color;
@@ -127,12 +129,11 @@ footer {
     background-attachment: fixed;
     @include wfull;
     article {
-        padding: 0rem;
+        padding: 0;
         >div.title {
             @include border1(17, 0);
-            height: 34vh;
-            padding-top: 16px;
-            padding-bottom: -8px;
+            height: 30vh;
+            padding-top: 0.5rem;
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
@@ -141,6 +142,7 @@ footer {
             align-items: center;
             h3 {
                 color: #ffffff;
+                margin: 0;
             }
             img {
                 height: 55%;
@@ -148,9 +150,11 @@ footer {
             }
         }
         p {
-            padding-top: 0.5rem;
-            padding-left: 0.75rem;
-            padding-right: 0.75rem;
+            margin: 0 0 0.5rem 0;
+            font-size: 1.1rem;
+        }
+        li {
+            font-size: 1.1rem;
         }
     }
     >article:nth-child(1) { @include border2($color_cyan1); }
@@ -170,7 +174,6 @@ footer {
     background-repeat: repeat;
     background-position: center bottom;
     background-attachment: fixed;
-    /*background-size: cover;*/
 }
 
 @mixin box($color, $image, $height, $target) {
@@ -199,8 +202,12 @@ footer {
             max-width: 960px;
             -skrollr-anchor-target: $target;
             p {
-                font-size: 146%;
+                font-family: 'Philosopher', sans-serif;
                 padding: 0 1.0rem;
+                color: $color_blue;
+                @media screen and (min-width: 320px) { font-size: 110%; }
+                @media screen and (min-width: 360px) { font-size: 150%; }
+                @media screen and (min-width: 768px) { font-size: 230%; }
             }
         }
         >.slide:nth-child(1) { -skrollr-animation-name: slide1; }
@@ -212,24 +219,28 @@ footer {
     }
     >.flow {
         @include landscape($image);
+        h4 {
+            color: $color_blue;
+            font-family: 'Philosopher', sans-serif;
+        }
+        p, li {
+            color: $color_black;
+        }
     }
 }
 
 #box3 {
-    $color: #000000;
-    $image: url(../images/tile1.svg);
-    @include box($color_cyan1, $image, 2200px, '#box3>.landscape');
+    $image: url(../images/tile2.svg);
+    @include box($color_cyan1, $image, 2400px, '#box3>.landscape');
 }
 
 #box4 {
-    $color: #000000;
-    $image: url(../images/tile1.svg);
-    @include box($color_cyan2, $image, 4000px, '#box4>.landscape');
+    $image: url(../images/tile3.svg);
+    @include box($color_cyan2, $image, 4100px, '#box4>.landscape');
 }
 
 #box5 {
-    $color: #000000;
-    $image: none;
-    @include box($color_cyan3, $image, 1500px, '#box5>.landscape');
+    $image: url(../images/tile4.svg);
+    @include box($color_cyan3, $image, 1800px, '#box5>.landscape');
 }
 
