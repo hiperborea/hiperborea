@@ -14,6 +14,11 @@
 }
 
 /* box: effects in slideshow */
+@-skrollr-keyframes slideshow {
+    start { display: none; }
+    top { display: flex; }
+}
+
 @mixin slides($x, $h, $s) {
     start {               opacity: 0; display: none; }
     -#{$x}-top {          opacity: 0; display: inline-block;}

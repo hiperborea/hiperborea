@@ -176,7 +176,7 @@ footer {
     background-attachment: fixed;
 }
 
-@mixin box($color, $image, $height, $target) {
+@mixin box($color, $image, $height, $target, $base) {
     @include wfull;
     @include separator($color);
     >.landscape {
@@ -195,6 +195,9 @@ footer {
         justify-content: center;
         align-items: center;
         align-content: center;
+        -skrollr-animation-name: slideshow;
+        -skrollr-anchor-target: $base;
+
         >.slide {
             order: 0;
             flex: 0 1 auto;
@@ -231,16 +234,16 @@ footer {
 
 #box3 {
     $image: url(../images/tile2.svg);
-    @include box($color_cyan1, $image, 2400px, '#box3>.landscape');
+    @include box($color_cyan1, $image, 2400px, '#box3>.landscape', '#box3');
 }
 
 #box4 {
     $image: url(../images/tile3.svg);
-    @include box($color_cyan2, $image, 4100px, '#box4>.landscape');
+    @include box($color_cyan2, $image, 4100px, '#box4>.landscape', '#box4');
 }
 
 #box5 {
     $image: url(../images/tile4.svg);
-    @include box($color_cyan3, $image, 1800px, '#box5>.landscape');
+    @include box($color_cyan3, $image, 1800px, '#box5>.landscape', '#box5');
 }
 

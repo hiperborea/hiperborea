@@ -7,12 +7,13 @@
         <meta name="viewport"
             content="width=device-width,initial-scale=1,maximum-scale=1" />
         <link rel="shortcut icon" href="/favicon.ico" />
+        <link href='http://fonts.googleapis.com/css?family=Philosopher'
+              rel='stylesheet' type='text/css' />
 
         <!-- build:css(.tmp) styles/app.css -->
         <link rel="stylesheet" href="styles/app.css"
               data-skrollr-stylesheet="data-skrollr-stylesheet" />
         <!-- endbuild -->
-<link href='http://fonts.googleapis.com/css?family=Philosopher' rel='stylesheet' type='text/css'>
 
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="../bower_components/modernizr/modernizr.js"></script>
@@ -33,8 +34,8 @@
                 </ul>
                 <section class="top-bar-section">
                     <ul class="right">
-                    <li><a href="/us.html">Nosotros</a></li>
-                    <li><a href="/services.html">Servicios</a></li>
+                        <!--<li><a href="/us.html">Nosotros</a></li>-->
+                        <!--<li><a href="/services.html">Servicios</a></li>-->
                     <li><a href="http://blog.hiperborea.com.bo">Blog</a></li>
                     </ul>
                 </section>
@@ -44,8 +45,8 @@
         <section id="box1">
             <div>
                 <ul class="inline-list">
-                    <li><a href="#">[ES]</a></li>
-                    <li><a href="#">[EN]</a></li>
+                    <!--<li><a href="#">[ES]</a></li>-->
+                    <!--<li><a href="#">[EN]</a></li>-->
                 </ul>
             </div>
             <div>
@@ -75,7 +76,8 @@ mediante nuestros servicios:
                         <li>Auditoría de seguridad externa.</li>
                         <li>Auditoría de seguridad de código fuente.</li>
                     </ul>
-                    <a class="button small expand radius" href="">Ver mas</a>
+                    <a class="button small expand radius"
+                       href="#security">Ver más</a>
                 </div>
             </article>
             <article class="large-4 columns">
@@ -93,7 +95,8 @@ ofrecerte los siguientes servicios:
                         <li>Desarrollo de aplicaciones mobiles.</li>
                         <li>Desarrollo de aplicaciones en tiempo real.</li>
                     </ul>
-                    <a class="button small expand radius" href="">Ver mas</a>
+                    <a class="button small expand radius"
+                       href="#development">Ver más</a>
                 </div>
             </article>
             <article class="large-4 columns">
@@ -111,7 +114,8 @@ de tu infraestructura IT.
                         <li>Seguridad perimetral.</li>
                         <li>Soporte a plataformas GNU/Linux.</li>
                     </ul>
-                    <a class="button small expand radius" href="">Ver mas</a>
+                    <a class="button small expand radius"
+                       href="#sysadmin">Ver más</a>
                 </div>
             </article>
             <div class="clear"></div>
@@ -143,7 +147,7 @@ seguridad y entrar a las áreas críticas de las organizaciones.
                     </p>
                 </div>
             </div>
-            <div class="flow">
+            <div id="security" class="flow" data-menu-offset="-100">
                 <div class="row">
                     <div class="medium-4 columns">
                         <h4>Auditoría de Seguridad Interna</h4>
@@ -265,7 +269,7 @@ organización aprovechar las nuevas oportunidades de negocio.
                     <p class="text-justify">Nosotros te ofrecemos:</p>
                 </div>
             </div>
-            <div class="flow">
+            <div id="development" class="flow" data-menu-offset="-100">
                 <div class="row">
                     <div class="medium-4 columns">
                         <h4>Desarrollo de aplicaciones web</h4>
@@ -325,7 +329,7 @@ funcionamiento de su infraestructura IT.
                     </p>
                 </div>
             </div>
-            <div class="flow">
+            <div id="sysadmin" class="flow" data-menu-offset="-100">
                 <div class="row">
                     <div class="medium-4 columns">
                         <h4>Gestión de Infraestructura IT</h4>
@@ -407,6 +411,7 @@ operativos y lograr un optimo uso de sus recursos.
 <script src="../bower_components/foundation/js/foundation.min.js"></script>
 <script src="../bower_components/skrollr-stylesheets/dist/skrollr.stylesheets.min.js"></script>
 <script src="../bower_components/skrollr/dist/skrollr.min.js"></script>
+<script src="../bower_components/skrollr-menu/dist/skrollr.menu.min.js"></script>
 <script src="js/app.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
