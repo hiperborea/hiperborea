@@ -25,6 +25,7 @@ module.exports = function (grunt) {
       , concurrent:{
             server:[
                 'emberTemplates'
+              , 'less:server'
             ]
         }
       , emberTemplates:{
@@ -48,6 +49,17 @@ module.exports = function (grunt) {
                 }
               , src:'app/scripts/app.js'
               , dest:'.tmp/scripts/combined-scripts.js'
+            }
+        }
+      , less:{
+            server:{
+                options:{
+                    dumpLineNumbers:'all'
+                  , paths:['bower_components']
+                }
+              , files:{
+                    '.tmp/styles/style.css':'app/styles/style.less'
+                }
             }
         }
       , connect:{
@@ -78,6 +90,10 @@ module.exports = function (grunt) {
           , neuter:{
                 files:['app/scripts/{,*/}*.js']
               , tasks:['neuter']
+            }
+          , less:{
+                files:['app/styles/{,*/}*.less']
+              , tasks:['less:server']
             }
           , livereload:{
                 options:{
