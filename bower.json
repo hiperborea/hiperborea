@@ -2,12 +2,11 @@
   "name": "hiperborea",
   "version": "0.0.1",
   "dependencies": {
-    "jquery": "~2.1.1",
-    "foundation": ">=5.0.2",
-    "foundation-icon-fonts": "*",
     "skrollr": "~0.6.26",
     "skrollr-stylesheets": "~0.0.6",
-    "skrollr-menu": "~0.1.12"
+    "skrollr-menu": "~0.1.12",
+    "ember": "~1.7.0",
+    "ember-data": "~0.0.14"
   },
   "devDependencies": {}
 }
