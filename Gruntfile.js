@@ -101,9 +101,8 @@ module.exports = function (grunt) {
                 }
               , files:[
                     '.tmp/scripts/*.js'
-                  , '.tmp/styles/{,*/}.css'
-                  , 'app/*.html'
-                  , 'app/styles/{,*/}.css'
+                  , '.tmp/styles/*.css'
+                  , '.tmp/*.html'
                 ]
             }
         }

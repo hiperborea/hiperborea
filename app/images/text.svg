@@ -13,7 +13,7 @@
    height="192"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.48.5 r10040"
    sodipodi:docname="text.svg">
   <defs
      id="defs4" />
@@ -25,17 +25,17 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="276.57122"
-     inkscape:cy="23.214945"
+     inkscape:cx="345.18633"
+     inkscape:cy="161.36866"
      inkscape:document-units="px"
      inkscape:current-layer="layer2"
      showgrid="true"
      inkscape:showpageshadow="false"
-     inkscape:window-width="1360"
-     inkscape:window-height="743"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1"
+     inkscape:window-width="1136"
+     inkscape:window-height="800"
+     inkscape:window-x="106"
+     inkscape:window-y="179"
+     inkscape:window-maximized="0"
      inkscape:snap-global="false">
     <inkscape:grid
        type="xygrid"
@@ -130,5 +130,16 @@
        style="fill:#002255;fill-opacity:1;stroke:none;display:inline"
        d="m 512,640 c -17.66905,0 -32,14.33098 -32,32 0,17.66904 14.33095,32 32,32 17.66905,0 31.99013,-14.3165 32,-32 l -8,0 c -0.0398,13.25562 -10.75883,24 -24,24 -6.26384,0 -11.95903,-2.42249 -16.22986,-6.3558 l 43.95843,-33.60529 C 533.98377,646.10407 523.42987,640 512,640 z m 0,8.03361 c 6.12331,0 12.01428,2.33989 16.45611,6.53436 l -37.6362,28.68331 c -1.78419,-3.35358 -2.80048,-7.18764 -2.80048,-11.25128 0,-13.24113 10.7394,-23.96639 23.98057,-23.96639 z"
        id="path3018" />
+    <text
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#002255;fill-opacity:1;stroke:none;font-family:Helvetica Neue LT Com;-inkscape-font-specification:Helvetica Neue LT Com"
+       x="429.08575"
+       y="759.552"
+       id="text2994"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan2996"
+         x="429.08575"
+         y="759.552">IT Security</tspan></text>
   </g>
 </svg>
