@@ -2,17 +2,17 @@
 @import 'fonts.less';
 @import 'animations.less';
 
-@logo_width: 616px;
-@logo_height: 192px;
-
 @color_blue: #002255;
+@color_gray: #b3b3b3;
 
 body {
     background-image: url('/images/mosaic.svg');
-    background-position: 0px 2px;
 }
 
-#front {
+section#front {
+    @logo_width: 616px;
+    @logo_height: 192px;
+
     width: 100%;
     height: 66vh;
     display: flex;
@@ -25,7 +25,7 @@ body {
     div.wrapper {
         text-align: center;
 
-        #textlogo {
+        div.text {
             background-image: url('/images/text.svg');
             background-size: 100%;
             display: inline-block;
@@ -44,7 +44,7 @@ body {
             }
         }
 
-        #logo {
+        div.logo {
             display: inline-block;
             .generic(@width;@height) {
                 background-image: url('/images/logo.svg');
@@ -90,50 +90,100 @@ body {
     }
 }
 
-.row {
-    width: 100%;
-    height: 34vh;
-    background-color: @color_blue;
+section#topics {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: strech;
+    align-items: center;
 
-    .item {
-        display: table-cell;
-        h2 {
+    @logo_width: 128px;
+    @logo_height: 128px;
+
+    &>div {
+        text-align: center;
+
+        div.logo {
+            margin: 0 auto;
+            background-image: url('/images/icons.svg');
+            background-size: 100%;
+            border-radius: 50%;
+            box-shadow: 0rem -0.25rem 1.0rem #000000 inset;
+
             @media (min-width: 900px) {
-                .font1(2.3rem);
+                width: @logo_width;
+                height: @logo_height;
             }
             @media (min-width: 500px) and (max-width: 899px) {
-                .font1(1.6rem);
+                width: @logo_width/1.5;
+                height: @logo_height/1.5;
             }
-            @media (max-width: 599px) {
-                .font1(1.4rem);
+            @media (max-width: 499px) {
+                width: @logo_width/2.5;
+                height: @logo_height/2.5;
             }
-            color: #ffffff;
-            text-align: center;
-            padding: 0.35rem;
+        }
+        div.text {
+            h2 {
+                @media (min-width: 900px) {
+                    .font1(1.8rem);
+                }
+                @media (min-width: 500px) and (max-width: 899px) {
+                    .font1(1.6rem);
+                }
+                @media (max-width: 499px) {
+                    .font1(1.4rem);
+                }
+            }
         }
     }
 
-    .item:nth-child(1) {
-        width: 33vw;
-        height: inherit;
-        background-color: lighten(@color_blue, 10%);
+    div.sysadmin {
+        div.logo {
+            background-color: lighten(@color_blue,30%);
+            background-position: 0px 0px;
+        }
+        h2 {
+            color: lighten(@color_blue,30%);
+        }
     }
-    .item:nth-child(2) {
-        width: 34vw;
-        height: inherit;
-        background-color: lighten(@color_blue, 20%);
+    div.security {
+        div.logo {
+            background-color: lighten(@color_blue,10%);
+            @media (min-width: 900px) {
+                background-position: 0px @logo_width;
+            }
+            @media (min-width: 500px) and (max-width: 899px) {
+                background-position: 0px @logo_width/1.5;
+            }
+            @media (max-width: 499px) {
+                background-position: 0px @logo_width/2.5;
+            }
+        }
+        h2 {
+            color: lighten(@color_blue,10%);
+        }
     }
-    .item:nth-child(3) {
-        width: 33vw;
-        height: inherit;
-        background-color: lighten(@color_blue, 30%);
+    div.development {
+        div.logo {
+            background-color: lighten(@color_blue,20%);
+            @media (min-width: 900px) {
+                background-position: 0px @logo_width*2;
+            }
+            @media (min-width: 500px) and (max-width: 899px) {
+                background-position: 0px @logo_width*2/1.5;
+            }
+            @media (max-width: 499px) {
+                background-position: 0px @logo_width*2/2.5;
+            }
+        }
+        h2 {
+            color: lighten(@color_blue,20%);
+        }
     }
 }
 
-section {
-    height: 100vh;
+section#security {
 
-    h1 {
-        .font1(3.0rem);
-    }
 }
