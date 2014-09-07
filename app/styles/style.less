@@ -13,7 +13,6 @@ section#front {
     @logo_width: 616px;
     @logo_height: 192px;
 
-    width: 100%;
     height: 66vh;
     display: flex;
     flex-direction: column;
@@ -88,102 +87,134 @@ section#front {
             }
         }
     }
+
+    div#topics {
+        padding-top: 5vh;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: strech;
+        align-items: center;
+
+        @logo_width: 100px;
+        @logo_height: 100px;
+
+        &>div {
+            text-align: center;
+            padding: 0rem 2.0rem;
+
+            div.logo {
+                margin: 0 auto;
+                background-image: url('/images/icons.svg');
+                background-size: 100%;
+                border-radius: 50%;
+                box-shadow: 0rem 0rem 0.4rem #000000 inset;
+
+                @media (min-width: 900px) {
+                    width: @logo_width;
+                    height: @logo_height;
+                }
+                @media (min-width: 500px) and (max-width: 899px) {
+                    width: @logo_width/1.5;
+                    height: @logo_height/1.5;
+                }
+                @media (max-width: 499px) {
+                    width: @logo_width/2.5;
+                    height: @logo_height/2.5;
+                }
+            }
+            div.text {
+                h2 {
+                    @media (min-width: 900px) {
+                        .font1(1.4rem);
+                    }
+                    @media (min-width: 500px) and (max-width: 899px) {
+                        .font1(1.2rem);
+                    }
+                    @media (max-width: 499px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        div.sysadmin {
+            div.logo {
+                background-color: lighten(@color_blue,30%);
+                background-position: 0px 0px;
+            }
+            h2 {
+                color: lighten(@color_blue,30%);
+            }
+        }
+        div.security {
+            div.logo {
+                background-color: lighten(@color_blue,10%);
+                @media (min-width: 900px) {
+                    background-position: 0px @logo_width;
+                }
+                @media (min-width: 500px) and (max-width: 899px) {
+                    background-position: 0px @logo_width/1.5;
+                }
+                @media (max-width: 499px) {
+                    background-position: 0px @logo_width/2.5;
+                }
+            }
+            h2 {
+                color: lighten(@color_blue,10%);
+            }
+        }
+        div.development {
+            div.logo {
+                background-color: lighten(@color_blue,20%);
+                @media (min-width: 900px) {
+                    background-position: 0px @logo_width*2;
+                }
+                @media (min-width: 500px) and (max-width: 899px) {
+                    background-position: 0px @logo_width*2/1.5;
+                }
+                @media (max-width: 499px) {
+                    background-position: 0px @logo_width*2/2.5;
+                }
+            }
+            h2 {
+                color: lighten(@color_blue,20%);
+            }
+        }
+    }
 }
 
-section#topics {
+footer {
+    width: 100%;
+    height: 34vh;
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-content: strech;
-    align-items: center;
+    align-content: center;
+    align-items: stretch;
 
-    @logo_width: 128px;
-    @logo_height: 128px;
-
-    &>div {
-        text-align: center;
-
-        div.logo {
-            margin: 0 auto;
-            background-image: url('/images/icons.svg');
-            background-size: 100%;
-            border-radius: 50%;
-            box-shadow: 0rem -0.25rem 1.0rem #000000 inset;
-
-            @media (min-width: 900px) {
-                width: @logo_width;
-                height: @logo_height;
-            }
-            @media (min-width: 500px) and (max-width: 899px) {
-                width: @logo_width/1.5;
-                height: @logo_height/1.5;
-            }
-            @media (max-width: 499px) {
-                width: @logo_width/2.5;
-                height: @logo_height/2.5;
-            }
+    div.col {
+        color: #ffffff;
+        h3 {
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: normal;
+            .font1(1.5rem);
         }
-        div.text {
-            h2 {
-                @media (min-width: 900px) {
-                    .font1(1.8rem);
-                }
-                @media (min-width: 500px) and (max-width: 899px) {
-                    .font1(1.6rem);
-                }
-                @media (max-width: 499px) {
-                    .font1(1.4rem);
-                }
+        ul {
+            padding: 0;
+            list-style: none;
+            li {
+                font-weight: normal;
+                .font1(1.3rem);
+                line-height: 2.5rem;
             }
         }
     }
 
-    div.sysadmin {
-        div.logo {
-            background-color: lighten(@color_blue,30%);
-            background-position: 0px 0px;
-        }
-        h2 {
-            color: lighten(@color_blue,30%);
-        }
-    }
-    div.security {
-        div.logo {
-            background-color: lighten(@color_blue,10%);
-            @media (min-width: 900px) {
-                background-position: 0px @logo_width;
-            }
-            @media (min-width: 500px) and (max-width: 899px) {
-                background-position: 0px @logo_width/1.5;
-            }
-            @media (max-width: 499px) {
-                background-position: 0px @logo_width/2.5;
-            }
-        }
-        h2 {
-            color: lighten(@color_blue,10%);
-        }
-    }
-    div.development {
-        div.logo {
-            background-color: lighten(@color_blue,20%);
-            @media (min-width: 900px) {
-                background-position: 0px @logo_width*2;
-            }
-            @media (min-width: 500px) and (max-width: 899px) {
-                background-position: 0px @logo_width*2/1.5;
-            }
-            @media (max-width: 499px) {
-                background-position: 0px @logo_width*2/2.5;
-            }
-        }
-        h2 {
-            color: lighten(@color_blue,20%);
-        }
-    }
+    background-color: @color_blue;
 }
 
-section#security {
-
-}
