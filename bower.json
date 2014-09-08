@@ -7,7 +7,8 @@
     "skrollr-menu": "~0.1.12",
     "ember": "~1.7.0",
     "ember-data": "~0.0.14",
-    "normalize-less": "*"
+    "normalize-less": "*",
+    "font-awesome": "~4.2.0"
   },
   "devDependencies": {}
 }

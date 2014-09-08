@@ -88,7 +88,7 @@ section#front {
         }
     }
 
-    div#topics {
+    div.icons {
         padding-top: 5vh;
         display: flex;
         flex-direction: row;
@@ -127,10 +127,10 @@ section#front {
             div.text {
                 h2 {
                     @media (min-width: 900px) {
-                        .font1(1.4rem);
+                        .font1(1.6rem);
                     }
                     @media (min-width: 500px) and (max-width: 899px) {
-                        .font1(1.2rem);
+                        .font1(1.4rem);
                     }
                     @media (max-width: 499px) {
                         display: none;
@@ -185,36 +185,130 @@ section#front {
     }
 }
 
-footer {
+section#details {
     width: 100%;
-    height: 34vh;
+    min-height: 28vh;
+    box-sizing: border-box;
+
+    background-color: @color_blue;
+
+    div.wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: center;
+        align-items: stretch;
+
+        div.col {
+            @media (min-width: 900px) {
+                max-width: 26.0rem;
+            }
+            @media (min-width: 600px) and (max-width: 899px) {
+                max-width: 18.0rem;
+            }
+            @media (max-width: 599px) {
+                max-width: 40rem;
+                padding: 0em 2.0em;
+            }
+
+            color: #ffffff;
+            h3 {
+                text-align: center;
+                text-transform: uppercase;
+                text-decoration: underline;
+                font-weight: normal;
+                @media (min-width: 900px) {
+                    .font1(1.6rem);
+                }
+                @media (min-width: 500px) and (max-width: 899px) {
+                    .font1(1.3rem);
+                }
+                @media (max-width: 499px) {
+                    .font1(1.3rem);
+                }
+            }
+            p {
+                line-height: 1.8rem;
+                margin-bottom: 1.2rem;
+                @media (min-width: 900px) {
+                    .font1(1.5rem);
+                }
+                @media (min-width: 500px) and (max-width: 899px) {
+                    .font1(1.3rem);
+                }
+                @media (max-width: 499px) {
+                    .font1(1.3rem);
+                }
+            }
+            ul {
+                padding-left: 1.5rem;
+                list-style: none;
+                li {
+                    font-weight: normal;
+                    line-height: 2.5rem;
+                    @media (min-width: 900px) {
+                        .font1(1.45rem);
+                    }
+                    @media (min-width: 500px) and (max-width: 899px) {
+                        .font1(1.3rem);
+                    }
+                    @media (max-width: 499px) {
+                        .font1(1.3rem);
+                    }
+                }
+            }
+        }
+    }
+}
+
+section#contact {
+    width: 100%;
+    min-height: 6vh;
+    box-sizing: border-box;
+
+    box-shadow: 0rem 0.2rem 0.4rem #000000 inset;
+    background-color: lighten(@color_blue,20%);
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-content: center;
     align-items: stretch;
 
-    div.col {
-        color: #ffffff;
-        h3 {
-            text-align: center;
-            text-transform: uppercase;
-            font-weight: normal;
-            .font1(1.5rem);
-        }
-        ul {
-            padding: 0;
-            list-style: none;
-            li {
-                font-weight: normal;
-                .font1(1.3rem);
-                line-height: 2.5rem;
+    div.left {
+        dl {
+            color: #ffffff;
+            margin: 0em 2.0em;
+
+            dt {
+                float: left;
+                width: 12.0em;
+            }
+            dd {
+                padding-left: 10.0em;
             }
         }
     }
 
-    background-color: @color_blue;
+    div.right {
+        ul {
+            list-style: none;
+            color: #ffffff;
+            margin: 0em 2.0em;
+
+            li {
+                float: left;
+                font-size: 3.0em;
+                padding: 0em 0.25em;
+
+                a {
+                    color: inherit;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
 }
 
