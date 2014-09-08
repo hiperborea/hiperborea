@@ -114,6 +114,11 @@ section#front {
                 background-size: 100%;
                 border-radius: 50%;
                 box-shadow: 0rem 0rem 0.4rem #000000 inset;
+                transition-duration: 1s;
+
+                &:hover {
+                    transform: rotate(360deg);
+                }
 
                 @media (min-width: 900px) {
                     width: @logo_width;
@@ -152,6 +157,9 @@ section#front {
             div.logo {
                 background-color: lighten(@color_blue,30%);
                 background-position: 0px 0px;
+                &:hover {
+                    background-color: spin(lighten(@color_blue,30%),180);
+                }
             }
             h2>a {
                 color: lighten(@color_blue,30%);
@@ -160,6 +168,10 @@ section#front {
         div.security {
             div.logo {
                 background-color: lighten(@color_blue,10%);
+                &:hover {
+                    background-color: spin(lighten(@color_blue,30%),180);
+                }
+
                 @media (min-width: 900px) {
                     background-position: 0px @logo_width;
                 }
@@ -177,6 +189,10 @@ section#front {
         div.development {
             div.logo {
                 background-color: lighten(@color_blue,20%);
+                &:hover {
+                    background-color: spin(lighten(@color_blue,30%),180);
+                }
+
                 @media (min-width: 900px) {
                     background-position: 0px @logo_width*2;
                 }
@@ -225,8 +241,8 @@ section#details {
             color: @color_gray;
             text-align: center;
             text-transform: uppercase;
-            text-decoration: underline;
-            font-weight: normal;
+            text-decoration: none;
+            font-weight: bold;
             @media (min-width: 900px) {
                 .font1(1.6rem);
             }
@@ -322,6 +338,10 @@ section#contact {
                 a {
                     color: inherit;
                     text-decoration: none;
+
+                    &:hover {
+                        color: spin(lighten(@color_blue,30%),180);
+                    }
                 }
             }
         }
