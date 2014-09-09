@@ -9,8 +9,42 @@ body {
     background-image: url('/images/mosaic.svg');
 }
 
-.clear {
-    clear: both;
+header {
+    position: fixed;
+    float: left;
+    width: 100%;
+
+    nav {
+        float: left;
+        width: 100%;
+        background-color: @color_blue;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                float: left;
+                a {
+                    .font1(1.4rem);
+                    color: #ffffff;
+                    text-decoration: none;
+                    float: left;
+                    padding: 0.8rem 1.2rem;
+                }
+            }
+        }
+
+        ul.left {
+            float: left;
+            margin-left: 1.0rem;
+        }
+        ul.right {
+            float: right;
+            margin-right: 1.0rem;
+        }
+    }
 }
 
 section#front {

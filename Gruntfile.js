@@ -59,6 +59,7 @@ module.exports = function (grunt) {
                 }
               , files:{
                     '.tmp/styles/style.css':'app/styles/style.less'
+                  , '.tmp/styles/skrollr.css':'app/styles/skrollr.less'
                 }
             }
         }
