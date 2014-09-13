@@ -1,8 +1,27 @@
-@import 'stylesheet.less';
 
 header {
     top: -3.18rem;
     -skrollr-animation-name: animation1;
     /*-skrollr-anchor-target: '#box2';*/
+}
+
+/* down the menubar */
+@-skrollr-keyframes animation1 {
+    100 {
+        top: 0px;
+    }
+}
+
+#test {
+    -skrollr-animation-name: test1;
+}
+
+@-skrollr-keyframes test1 {
+    0 {
+        background-color: #550044;
+    }
+    100 {
+        background-color: #000fff;
+    }
 }
 
