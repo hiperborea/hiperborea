@@ -18,6 +18,13 @@ header {
         float: left;
         width: 100%;
         background-color: @color_blue;
+        box-shadow: 0rem 0rem 0.5rem #000000;
+
+        @media (max-width: 499px) {
+            ul.right {
+                display: none;
+            }
+        }
 
         ul {
             list-style: none;
@@ -379,6 +386,22 @@ section#contact {
                 }
             }
         }
+    }
+}
+
+div.block {
+    * {
+        .font1(2.2rem);
+        margin: 1.0rem 1.0rem;
+    }
+
+    h1 {
+        font-size: 3.0rem;
+        padding: 1.0rem 0rem 0.5rem 0rem;
+    }
+
+    h2 {
+        padding: 1.0rem 0rem 0.5rem 0rem;
     }
 }
 
