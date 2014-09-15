@@ -33,8 +33,8 @@ module.exports=function(grunt){
           , dist: {
                 options:{
                     variables:{
-                        ember:'vendor/ember/ember.prod.js',
-                        ember_data:'vendor/ember-data/ember-data.prod.js'
+                        ember:'vendor/ember/ember.min.js',
+                        ember_data:'vendor/ember-data/ember-data.min.js'
                     }
                 }
               , files:[{
@@ -54,7 +54,7 @@ module.exports=function(grunt){
               , 'symlink'
               , 'imagemin'
               , 'svgmin'
-              , 'htmlmin'
+              , 'htmlmin:dist1'
             ]
         }
       , emberTemplates:{
@@ -181,12 +181,30 @@ module.exports=function(grunt){
             }
         }
       , htmlmin:{
-            dist:{
+            dist1:{
                 options:{}
               , files:[{
                     expand:true
                   , cwd:'app'
-                  , src:'*.html'
+                  , src:'{,*/}*.html'
+                  , dest:'dist'
+                }]
+            }
+          , dist2:{
+                options:{
+                    collapseBooleanAttributes:true
+                  , collapseWhitespace:true
+                  , removeAttributeQuotes:true
+                  , removeCommentsFromCDATA:true
+                  , removeEmptyAttributes:true
+                  , removeOptionalTags:true
+                  , removeRedundantAttributes:true
+                  , useShortDoctype:true
+                }
+              , files:[{
+                    expand:true
+                  , cwd:'dist'
+                  , src:'{,*/}*.html'
                   , dest:'dist'
                 }]
             }
@@ -202,7 +220,9 @@ module.exports=function(grunt){
         }
       , copy:{
             dist:{
-                src:'bower_components/font-awesome/fonts/*'
+                expand:true
+              , flatten:true
+              , src:'bower_components/font-awesome/fonts/*'
               , dest:'dist/fonts/'
             }
         }
@@ -247,6 +267,7 @@ module.exports=function(grunt){
       , 'copy'
       , 'rev'
       , 'usemin'
+      , 'htmlmin:dist2'
     ]);
 };
 
