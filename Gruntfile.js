@@ -1,12 +1,21 @@
 'use strict';
 
-module.exports = function (grunt) {
+module.exports=function(grunt){
     require('time-grunt')(grunt);
     require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
         clean:{
             server:'.tmp'
+          , dist:{
+                files:[{
+                    dot:true
+                  , src:[
+                        '.tmp'
+                      , 'dist/*'
+                    ]
+                }]
+            }
         }
       , replace:{
             app:{
@@ -17,8 +26,20 @@ module.exports = function (grunt) {
                     }
                 }
               , files:[{
-                    src: 'app/index.html'
-                  , dest: '.tmp/index.html'
+                    src:'app/index.html'
+                  , dest:'.tmp/index.html'
+                }]
+            }
+          , dist: {
+                options:{
+                    variables:{
+                        ember:'vendor/ember/ember.prod.js',
+                        ember_data:'vendor/ember-data/ember-data.prod.js'
+                    }
+                }
+              , files:[{
+                    src:'app/index.html'
+                  , dest:'.tmp/index.html'
                 }]
             }
         }
@@ -26,6 +47,14 @@ module.exports = function (grunt) {
             server:[
                 'emberTemplates'
               , 'less:server'
+            ]
+          , dist:[
+                'emberTemplates'
+              , 'less:dist'
+              , 'symlink'
+              , 'imagemin'
+              , 'svgmin'
+              , 'htmlmin'
             ]
         }
       , emberTemplates:{
@@ -59,7 +88,15 @@ module.exports = function (grunt) {
                 }
               , files:{
                     '.tmp/styles/style.css':'app/styles/style.less'
-                  , '.tmp/styles/skrollr.css':'app/styles/skrollr.less'
+                }
+            }
+          , dist:{
+                options:{
+                    cleancss:true
+                  , paths:['bower_components']
+                }
+              , files:{
+                    '.tmp/styles/style.css':'app/styles/style.less'
                 }
             }
         }
@@ -108,6 +145,86 @@ module.exports = function (grunt) {
                 ]
             }
         }
+      , useminPrepare:{
+            html:'.tmp/index.html',
+            options:{
+                dest:'dist'
+            }
+        }
+      , symlink:{
+            options:{
+                overwrite:false
+            }
+          , explicit:{
+                src:'bower_components'
+              , dest:'.tmp/vendor'
+            }
+        }
+      , imagemin:{
+            dist:{
+                files:[{
+                    expand:true
+                  , cwd:'app/images'
+                  , src:'{,*/}*.{png,jpg,jpeg}'
+                  , dest:'dist/images'
+                }]
+            }
+        }
+      , svgmin:{
+            dist:{
+                files:[{
+                    expand:true
+                  , cwd:'app/images'
+                  , src:'{,*/}*.svg'
+                  , dest:'dist/images'
+                }]
+            }
+        }
+      , htmlmin:{
+            dist:{
+                options:{}
+              , files:[{
+                    expand:true
+                  , cwd:'app'
+                  , src:'*.html'
+                  , dest:'dist'
+                }]
+            }
+        }
+      , cssmin:{
+            dist:{
+                files:{
+                    'dist/styles/main.css':[
+                        '.tmp/styles/{,*/}*.css'
+                    ]
+                }
+            }
+        }
+      , copy:{
+            dist:{
+                src:'bower_components/font-awesome/fonts/*'
+              , dest:'dist/fonts/'
+            }
+        }
+      , rev:{
+            dist:{
+                files:{
+                    src:[
+                        'dist/scripts/{,*/}*.js'
+                      , 'dist/styles/{,*/}*.css'
+                      , 'dist/images/{,*/}*.{png,jpg,jpeg,gif,webp}'
+                      , 'dist/styles/fonts/*'
+                    ]
+                }
+            }
+        }
+      , usemin:{
+            html:['dist/{,*/}*.html']
+          , css:['dist/styles/{,*/}*.css']
+          , options:{
+                dirs:['dist']
+            }
+        }
     });
 
     grunt.registerTask('serve',[
@@ -117,6 +234,19 @@ module.exports = function (grunt) {
       , 'neuter:app'
       , 'connect:livereload'
       , 'watch'
+    ]);
+
+    grunt.registerTask('build',[
+        'clean:dist'
+      , 'replace:dist'
+      , 'useminPrepare'
+      , 'concurrent:dist'
+      , 'neuter:app'
+      , 'concat'
+      , 'uglify'
+      , 'copy'
+      , 'rev'
+      , 'usemin'
     ]);
 };
 
