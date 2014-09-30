@@ -1,6 +1,6 @@
 var App=window.App=Ember.Application.create();
 
-App.Store=DS.Store.extend();
+//App.Store=DS.Store.extend();
 App.Skrollr=skrollr.init({forceHeight:false});
 
 /*skrollr.menu.init(s,{
