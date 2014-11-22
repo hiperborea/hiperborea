@@ -1,0 +1,53 @@
+Seguridad Informática
+
+Para garantizar la seguridad de sus sistemas se requiere de un conjunto de métodos y herramientas destinados a proteger la información, es aquí donde entran nuestros servicios.
+
+Estos están orientados a la seguridad informática aplicando una gran variedad de métodos para realizar pruebas, incluyendo tácticas de ingeniería social, uso de herramientas de hacking, uso de códigos que explotan vulnerabilidades conocidas.
+
+Desde el punto de vista de un atacante real, que conlleven a vulnerar la seguridad y entrar a las áreas críticas de las organizaciones.
+
+Evaluación y auditoría de seguridad.
+Configuración y mantenimiento de seguridad.
+Auditoria de seguridad de código fuente.
+Análisis de incidentes.
+Coordinación de la respuesta de incidentes.
+Consultora de seguridad.
+Educación/formación.
+
+
+
+Infraestructura IT
+
+Cuando su negocio o infraestructura técnica requiere funcionalidad adicional, Hiperbórea tiene la capacidad de realizar desarrollo de aplicaciones y asistencia especializada.
+
+Ya sea que esté integrando con un tercero o un sistema propietario o trata de ampliar su solución para satisfacer una oportunidad de negocio específica.
+
+Nosotros trabajamos junto a usted para crear un entorno de seguridad robusto y confiable.
+
+Esta funcionalidad personalizada puede desempeñar un papel fundamental en la ampliación de su solución de seguridad, que le permita integrarse con éxito con otros sistemas e infraestructura.
+
+También puede utilizar nuestros servicios para aumentar la productividad mediante la adición de capacidades de automatización que permitirá a su organización aprovechar nuevas oportunidades de negocio.
+
+Gestión de infraestructura IT.
+Seguridad perimetral.
+Soporte para plataformas GNU/Linux.
+Cableado estructurado.
+Seguridad perimetral.
+Administración de redes.
+IPS.
+Mantenimiento ordenadores.
+Evaluación de la preparación de la infraestructura de IT.
+Instalación, configuración y solución de problemas de Sistemas.
+Hosting.
+
+
+
+Desarrollo de Sistemas
+
+Se centra en la capacidad operativa de la infraestructura IT, que son esenciales para el seguimiento de las condiciones de seguridad o de cumplimiento critico.
+
+Nuestra responsabilidad es diseñar, implementar, ejecutar y asegurar el correcto funcionamiento de su infraestructura IT.
+
+Desarrollo de aplicaciones web.
+Desarrrollo de aplicaciones mobiles.
+Desarrollo de aplicaciones para tiempo real.
