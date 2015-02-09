@@ -14,7 +14,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.5 r10040"
-   sodipodi:docname="catalog.svg">
+   sodipodi:docname="catalog.svg"
+   inkscape:export-filename="/home/jacobian/Proyectos/hiperborea/branding/catalog.png"
+   inkscape:export-xdpi="180"
+   inkscape:export-ydpi="180">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -24,16 +27,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7071068"
-     inkscape:cx="3860.1048"
-     inkscape:cy="619.0056"
+     inkscape:zoom="0.25000001"
+     inkscape:cx="3720.4488"
+     inkscape:cy="297.69623"
      inkscape:document-units="px"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="layer1"
      showgrid="false"
      showborder="false"
      inkscape:showpageshadow="false"
-     inkscape:window-width="1360"
-     inkscape:window-height="743"
+     inkscape:window-width="954"
+     inkscape:window-height="1055"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -116,7 +119,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -124,8 +127,7 @@
      inkscape:label="pages"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-62.36218)"
-     sodipodi:insensitive="true">
+     transform="translate(0,-62.36218)">
     <rect
        style="fill:none;stroke:#000000"
        id="rect2985"
@@ -153,21 +155,30 @@
        width="765"
        height="990"
        x="2295"
-       y="62.362183" />
+       y="62.362183"
+       inkscape:export-filename="/home/jacobian/Proyectos/hiperborea/branding/text3223.png"
+       inkscape:export-xdpi="180"
+       inkscape:export-ydpi="180" />
     <rect
        y="62.362183"
        x="3060"
        height="990"
        width="765"
        id="rect2993"
-       style="fill:none;stroke:#000000" />
+       style="fill:none;stroke:#000000"
+       inkscape:export-filename="/home/jacobian/Proyectos/hiperborea/branding/text3223.png"
+       inkscape:export-xdpi="180"
+       inkscape:export-ydpi="180" />
     <rect
        style="fill:none;stroke:#000000"
        id="rect2995"
        width="765"
        height="990"
        x="3825"
-       y="62.362183" />
+       y="62.362183"
+       inkscape:export-filename="/home/jacobian/Proyectos/hiperborea/branding/text3223.png"
+       inkscape:export-xdpi="180"
+       inkscape:export-ydpi="180" />
     <rect
        style="fill:none;stroke:#000000"
        id="rect2997"
@@ -193,11 +204,17 @@
        height="120"
        width="765.01172"
        id="rect4541"
-       style="fill:#002255;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+       style="fill:#002255;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       inkscape:export-filename="/home/jacobian/Proyectos/hiperborea/branding/text3223.png"
+       inkscape:export-xdpi="180"
+       inkscape:export-ydpi="180" />
     <g
        style="display:inline"
        id="g3003"
-       transform="matrix(0.38847214,0,0,0.38847214,2337.1161,-357.6648)">
+       transform="matrix(0.38847214,0,0,0.38847214,2340.0622,-357.6648)"
+       inkscape:export-filename="/home/jacobian/Proyectos/hiperborea/branding/text3223.png"
+       inkscape:export-xdpi="180"
+       inkscape:export-ydpi="180">
       <circle
          style="fill:#ffffff"
          id="circle3"
@@ -260,13 +277,16 @@
     <text
        xml:space="preserve"
        style="font-size:37.64184952px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:GeosansLight;-inkscape-font-specification:GeosansLight Medium"
-       x="2478.3618"
+       x="2488.3789"
        y="70.320061"
        id="text4561"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/jacobian/Proyectos/hiperborea/branding/text3223.png"
+       inkscape:export-xdpi="180"
+       inkscape:export-ydpi="180"><tspan
          sodipodi:role="line"
          id="tspan4563"
-         x="2478.3618"
+         x="2488.3789"
          y="70.320061">Seguridad Informática</tspan></text>
     <rect
        style="fill:#002255;fill-opacity:1;fill-rule:evenodd;stroke:none"
@@ -274,22 +294,41 @@
        width="765.01172"
        height="120"
        x="3060.0117"
-       y="-0.012630644" />
+       y="-0.012630644"
+       inkscape:export-filename="/home/jacobian/Proyectos/hiperborea/branding/text3223.png"
+       inkscape:export-xdpi="180"
+       inkscape:export-ydpi="180" />
+    <rect
+       y="-0.012630644"
+       x="3824.9841"
+       height="120"
+       width="765.01172"
+       id="rect4613"
+       style="fill:#002255;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       inkscape:export-filename="/home/jacobian/Proyectos/hiperborea/branding/text3223.png"
+       inkscape:export-xdpi="180"
+       inkscape:export-ydpi="180" />
     <text
        sodipodi:linespacing="125%"
        id="text4601"
-       y="70.320061"
-       x="3243.3735"
+       y="73.76429"
+       x="4031.4817"
        style="font-size:37.64184952px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:GeosansLight;-inkscape-font-specification:GeosansLight Medium"
-       xml:space="preserve"><tspan
-         y="70.320061"
-         x="3243.3735"
+       xml:space="preserve"
+       inkscape:export-filename="/home/jacobian/Proyectos/hiperborea/branding/text3223.png"
+       inkscape:export-xdpi="180"
+       inkscape:export-ydpi="180"><tspan
+         y="73.76429"
+         x="4031.4817"
          id="tspan4603"
          sodipodi:role="line">Desarrollo de Sistemas</tspan></text>
     <g
-       transform="matrix(1.6835725,0,0,1.6835725,3098.8905,17.898057)"
+       transform="matrix(1.6835725,0,0,1.6835725,3886.9979,17.898057)"
        id="Layer_64"
-       style="fill:#ffffff;display:inline">
+       style="fill:#ffffff;display:inline"
+       inkscape:export-filename="/home/jacobian/Proyectos/hiperborea/branding/text3223.png"
+       inkscape:export-xdpi="180"
+       inkscape:export-ydpi="180">
       <g
          id="g66"
          style="fill:#ffffff">
@@ -299,7 +338,7 @@
            id="path68"
            style="fill:#ffffff" />
         <polygon
-           points="7.822,6.384 7.822,14.487 10.451,14.487 10.451,9.012 40.293,9.012 40.293,21.122 42.923,21.122 42.923,6.384 "
+           points="42.923,21.122 42.923,6.384 7.822,6.384 7.822,14.487 10.451,14.487 10.451,9.012 40.293,9.012 40.293,21.122 "
            id="polygon70"
            style="fill:#ffffff" />
         <rect
@@ -315,39 +354,41 @@
            id="path74"
            style="fill:#ffffff" />
         <polygon
-           points="34.893,34.335 34.893,30.603 25.87,30.603 24.869,30.603 21.063,30.603 21.063,32.197 30.333,32.197 30.333,32.894 21.063,32.894 21.063,34.335 "
+           points="21.063,30.603 21.063,32.197 30.333,32.197 30.333,32.894 21.063,32.894 21.063,34.335 34.893,34.335 34.893,30.603 25.87,30.603 24.869,30.603 "
            id="polygon76"
            style="fill:#ffffff" />
       </g>
     </g>
-    <rect
-       y="-0.012630644"
-       x="3824.9841"
-       height="120"
-       width="765.01172"
-       id="rect4613"
-       style="fill:#002255;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <text
        xml:space="preserve"
        style="font-size:37.64184952px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:GeosansLight;-inkscape-font-specification:GeosansLight Medium"
-       x="4008.3459"
-       y="70.320061"
+       x="3236.2153"
+       y="73.820747"
        id="text4615"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/jacobian/Proyectos/hiperborea/branding/text3223.png"
+       inkscape:export-xdpi="180"
+       inkscape:export-ydpi="180"><tspan
          sodipodi:role="line"
          id="tspan4617"
-         x="4008.3459"
-         y="70.320061">Infraestructura IT</tspan></text>
+         x="3236.2153"
+         y="73.820747">Infraestructura IT</tspan></text>
     <path
        style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;display:inline"
-       d="m 3894.3007,19.987369 c -3.4183,0 -6.1702,2.75195 -6.1702,6.17028 l 0,67.65944 c 0,3.41832 2.7519,6.17028 6.1702,6.17028 l 32.572,0 c 3.4183,0 6.1702,-2.75196 6.1702,-6.17028 l 0,-67.65944 c 0,-3.41833 -2.7519,-6.17028 -6.1702,-6.17028 l -32.572,0 z m 1.2697,8.62652 30.0326,0 c 1.0536,0 1.8986,0.84496 1.8986,1.89855 0,1.05359 -0.845,1.89854 -1.8986,1.89854 l -30.0326,0 c -1.0536,0 -1.9104,-0.84495 -1.9104,-1.89854 0,-1.05359 0.8568,-1.89855 1.9104,-1.89855 z m 0,8.7333 30.0326,0 c 1.0536,0 1.8986,0.84495 1.8986,1.89856 0,1.05358 -0.845,1.89854 -1.8986,1.89854 l -30.0326,0 c -1.0536,0 -1.9104,-0.84496 -1.9104,-1.89854 0,-1.05361 0.8568,-1.89856 1.9104,-1.89856 z m 0,8.63839 30.0326,0 c 1.0536,0 1.8986,0.84494 1.8986,1.89855 0,1.05362 -0.845,1.89855 -1.8986,1.89855 l -30.0326,0 c -1.0536,0 -1.9104,-0.84493 -1.9104,-1.89855 0,-1.05361 0.8568,-1.89855 1.9104,-1.89855 z m 28.9528,12.82708 c 1.6468,0 2.9784,1.33152 2.9784,2.97831 0,1.6468 -1.3316,2.97838 -2.9784,2.97838 -1.6468,0 -2.9783,-1.33154 -2.9783,-2.97838 0,-1.64679 1.3315,-2.97831 2.9783,-2.97831 z m -30.0563,14.9866 c 0.447,0 0.8068,0.35989 0.8068,0.80689 l 0,19.17535 c 0,0.44702 -0.3598,0.80683 -0.8068,0.80683 -0.4471,0 -0.8069,-0.35981 -0.8069,-0.80683 l 0,-19.17535 c 0,-0.447 0.3598,-0.80689 0.8069,-0.80689 z m 5.3752,0 c 0.447,0 0.8069,0.35989 0.8069,0.80689 l 0,19.17535 c 0,0.44702 -0.3599,0.80683 -0.8069,0.80683 -0.447,0 -0.8069,-0.35981 -0.8069,-0.80683 l 0,-19.17535 c 0,-0.447 0.3599,-0.80689 0.8069,-0.80689 z m 5.3753,0 c 0.447,0 0.8069,0.35989 0.8069,0.80689 l 0,19.17535 c 0,0.44702 -0.3599,0.80683 -0.8069,0.80683 -0.447,0 -0.8069,-0.35981 -0.8069,-0.80683 l 0,-19.17535 c 0,-0.447 0.3599,-0.80689 0.8069,-0.80689 z m 5.3634,0 c 0.447,0 0.8069,0.35989 0.8069,0.80689 l 0,19.17535 c 0,0.44702 -0.3599,0.80683 -0.8069,0.80683 -0.447,0 -0.8069,-0.35981 -0.8069,-0.80683 l 0,-19.17535 c 0,-0.447 0.3599,-0.80689 0.8069,-0.80689 z m 5.3752,0 c 0.447,0 0.8069,0.35989 0.8069,0.80689 l 0,19.17535 c 0,0.44702 -0.3599,0.80683 -0.8069,0.80683 -0.447,0 -0.8069,-0.35981 -0.8069,-0.80683 l 0,-19.17535 c 0,-0.447 0.3599,-0.80689 0.8069,-0.80689 z m 5.3753,0 c 0.447,0 0.8069,0.35989 0.8069,0.80689 l 0,19.17535 c 0,0.44702 -0.3599,0.80683 -0.8069,0.80683 -0.447,0 -0.8069,-0.35981 -0.8069,-0.80683 l 0,-19.17535 c 0,-0.447 0.3599,-0.80689 0.8069,-0.80689 z m 5.3634,0 c 0.447,0 0.8069,0.35989 0.8069,0.80689 l 0,19.17535 c 0,0.44702 -0.3599,0.80683 -0.8069,0.80683 -0.447,0 -0.8069,-0.35981 -0.8069,-0.80683 l 0,-19.17535 c 0,-0.447 0.3599,-0.80689 0.8069,-0.80689 z"
+       d="m 3122.1701,19.987369 c -3.4183,0 -6.1702,2.75195 -6.1702,6.17028 l 0,67.65944 c 0,3.41832 2.7519,6.17028 6.1702,6.17028 l 32.572,0 c 3.4183,0 6.1702,-2.75196 6.1702,-6.17028 l 0,-67.65944 c 0,-3.41833 -2.7519,-6.17028 -6.1702,-6.17028 l -32.572,0 z m 1.2697,8.62652 30.0326,0 c 1.0536,0 1.8986,0.84496 1.8986,1.89855 0,1.05359 -0.845,1.89854 -1.8986,1.89854 l -30.0326,0 c -1.0536,0 -1.9104,-0.84495 -1.9104,-1.89854 0,-1.05359 0.8568,-1.89855 1.9104,-1.89855 z m 0,8.7333 30.0326,0 c 1.0536,0 1.8986,0.84495 1.8986,1.89856 0,1.05358 -0.845,1.89854 -1.8986,1.89854 l -30.0326,0 c -1.0536,0 -1.9104,-0.84496 -1.9104,-1.89854 0,-1.05361 0.8568,-1.89856 1.9104,-1.89856 z m 0,8.63839 30.0326,0 c 1.0536,0 1.8986,0.84494 1.8986,1.89855 0,1.05362 -0.845,1.89855 -1.8986,1.89855 l -30.0326,0 c -1.0536,0 -1.9104,-0.84493 -1.9104,-1.89855 0,-1.05361 0.8568,-1.89855 1.9104,-1.89855 z m 28.9528,12.82708 c 1.6468,0 2.9784,1.33152 2.9784,2.97831 0,1.6468 -1.3316,2.97838 -2.9784,2.97838 -1.6468,0 -2.9783,-1.33154 -2.9783,-2.97838 0,-1.64679 1.3315,-2.97831 2.9783,-2.97831 z m -30.0563,14.9866 c 0.447,0 0.8068,0.35989 0.8068,0.80689 l 0,19.17535 c 0,0.44702 -0.3598,0.80683 -0.8068,0.80683 -0.4471,0 -0.8069,-0.35981 -0.8069,-0.80683 l 0,-19.17535 c 0,-0.447 0.3598,-0.80689 0.8069,-0.80689 z m 5.3752,0 c 0.447,0 0.8069,0.35989 0.8069,0.80689 l 0,19.17535 c 0,0.44702 -0.3599,0.80683 -0.8069,0.80683 -0.447,0 -0.8069,-0.35981 -0.8069,-0.80683 l 0,-19.17535 c 0,-0.447 0.3599,-0.80689 0.8069,-0.80689 z m 5.3753,0 c 0.447,0 0.8069,0.35989 0.8069,0.80689 l 0,19.17535 c 0,0.44702 -0.3599,0.80683 -0.8069,0.80683 -0.447,0 -0.8069,-0.35981 -0.8069,-0.80683 l 0,-19.17535 c 0,-0.447 0.3599,-0.80689 0.8069,-0.80689 z m 5.3634,0 c 0.447,0 0.8069,0.35989 0.8069,0.80689 l 0,19.17535 c 0,0.44702 -0.3599,0.80683 -0.8069,0.80683 -0.447,0 -0.8069,-0.35981 -0.8069,-0.80683 l 0,-19.17535 c 0,-0.447 0.3599,-0.80689 0.8069,-0.80689 z m 5.3752,0 c 0.447,0 0.8069,0.35989 0.8069,0.80689 l 0,19.17535 c 0,0.44702 -0.3599,0.80683 -0.8069,0.80683 -0.447,0 -0.8069,-0.35981 -0.8069,-0.80683 l 0,-19.17535 c 0,-0.447 0.3599,-0.80689 0.8069,-0.80689 z m 5.3753,0 c 0.447,0 0.8069,0.35989 0.8069,0.80689 l 0,19.17535 c 0,0.44702 -0.3599,0.80683 -0.8069,0.80683 -0.447,0 -0.8069,-0.35981 -0.8069,-0.80683 l 0,-19.17535 c 0,-0.447 0.3599,-0.80689 0.8069,-0.80689 z m 5.3634,0 c 0.447,0 0.8069,0.35989 0.8069,0.80689 l 0,19.17535 c 0,0.44702 -0.3599,0.80683 -0.8069,0.80683 -0.447,0 -0.8069,-0.35981 -0.8069,-0.80683 l 0,-19.17535 c 0,-0.447 0.3599,-0.80689 0.8069,-0.80689 z"
        id="rect3006-3"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/jacobian/Proyectos/hiperborea/branding/text3223.png"
+       inkscape:export-xdpi="180"
+       inkscape:export-ydpi="180" />
     <flowRoot
        xml:space="preserve"
        id="flowRoot4619"
        style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Droid Sans Mono;-inkscape-font-specification:Droid Sans Mono"
-       transform="translate(9,3)"><flowRegion
+       transform="translate(9,3)"
+       inkscape:export-filename="/home/jacobian/Proyectos/hiperborea/branding/text3223.png"
+       inkscape:export-xdpi="180"
+       inkscape:export-ydpi="180"><flowRegion
          id="flowRegion4621"><rect
            id="rect4623"
            width="534.57666"
@@ -367,7 +408,10 @@
        transform="translate(775,3)"
        style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Droid Sans Mono;-inkscape-font-specification:Droid Sans Mono"
        id="flowRoot4635"
-       xml:space="preserve"><flowRegion
+       xml:space="preserve"
+       inkscape:export-filename="/home/jacobian/Proyectos/hiperborea/branding/text3223.png"
+       inkscape:export-xdpi="180"
+       inkscape:export-ydpi="180"><flowRegion
          id="flowRegion4637"><rect
            y="134"
            x="2309"
@@ -395,7 +439,10 @@
        xml:space="preserve"
        id="flowRoot4651"
        style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Droid Sans Mono;-inkscape-font-specification:Droid Sans Mono"
-       transform="translate(1538,3)"><flowRegion
+       transform="translate(1538,3)"
+       inkscape:export-filename="/home/jacobian/Proyectos/hiperborea/branding/text3223.png"
+       inkscape:export-xdpi="180"
+       inkscape:export-ydpi="180"><flowRegion
          id="flowRegion4653"><rect
            id="rect4655"
            width="419.06195"
@@ -501,7 +548,10 @@
        x="2364.5652"
        y="526.36871"
        id="text3140"
-       sodipodi:linespacing="200%"><tspan
+       sodipodi:linespacing="200%"
+       inkscape:export-filename="/home/jacobian/Proyectos/hiperborea/branding/text3223.png"
+       inkscape:export-xdpi="180"
+       inkscape:export-ydpi="180"><tspan
          sodipodi:role="line"
          id="tspan3142"
          x="2364.5652"
@@ -543,7 +593,10 @@
        y="637.36871"
        x="3132.9707"
        style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:175%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Droid Sans Mono;-inkscape-font-specification:Droid Sans Mono"
-       xml:space="preserve"><tspan
+       xml:space="preserve"
+       inkscape:export-filename="/home/jacobian/Proyectos/hiperborea/branding/text3223.png"
+       inkscape:export-xdpi="180"
+       inkscape:export-ydpi="180"><tspan
          style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:175%;font-family:Alte Haas Grotesk;-inkscape-font-specification:Alte Haas Grotesk"
          id="tspan3170"
          y="637.36871"
@@ -605,7 +658,9 @@
        x="3904.6445"
        y="406.02347"
        id="text3223"
-       sodipodi:linespacing="200%"><tspan
+       sodipodi:linespacing="200%"
+       inkscape:export-xdpi="180"
+       inkscape:export-ydpi="180"><tspan
          id="tspan3245"
          sodipodi:role="line"
          x="3904.6445"
