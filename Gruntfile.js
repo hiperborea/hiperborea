@@ -17,68 +17,17 @@ module.exports=function(grunt){
                 }]
             }
         }
-      , replace:{
-            app:{
-                options:{
-                    variables:{
-                        ember:'vendor/ember/ember.js'
-                      , ember_data:'vendor/ember-data/ember-data.js'
-                    }
-                }
-              , files:[{
-                    src:'app/index.html'
-                  , dest:'.tmp/index.html'
-                }]
-            }
-          , dist: {
-                options:{
-                    variables:{
-                        ember:'vendor/ember/ember.min.js',
-                        ember_data:'vendor/ember-data/ember-data.min.js'
-                    }
-                }
-              , files:[{
-                    src:'app/index.html'
-                  , dest:'.tmp/index.html'
-                }]
-            }
-        }
       , concurrent:{
             server:[
-                'emberTemplates'
-              , 'less:server'
+                'less:server'
             ]
           , dist:[
-                'emberTemplates'
-              , 'less:dist'
+                'less:dist'
               , 'symlink'
               , 'imagemin'
               , 'svgmin'
               , 'htmlmin:dist1'
             ]
-        }
-      , emberTemplates:{
-            options:{
-                templateName:function(sourceFile){
-                    return sourceFile.replace('app/templates/','');
-                }
-            }
-          , dist:{
-                files:{
-                '.tmp/scripts/compiled-templates.js':'app/templates/**/*.hbs'
-                }
-            }
-        }
-      , neuter:{
-            app:{
-                options:{
-                    filepathTransform:function(filepath){
-                        return 'app/'+filepath;
-                    }
-                }
-              , src:'app/scripts/app.js'
-              , dest:'.tmp/scripts/combined-scripts.js'
-            }
         }
       , less:{
             server:{
@@ -102,7 +51,7 @@ module.exports=function(grunt){
         }
       , connect:{
             options:{
-                port:9000
+                port:2999
               , livereload:35729
               , hostname:'localhost'
             }
@@ -121,15 +70,7 @@ module.exports=function(grunt){
             }
         }
       , watch:{
-            emberTemplates:{
-                files:'app/templates/**/*.hbs'
-              , tasks:['emberTemplates']
-            }
-          , neuter:{
-                files:['app/scripts/{,*/}*.js']
-              , tasks:['neuter']
-            }
-          , less:{
+            less:{
                 files:['app/styles/{,*/}*.less']
               , tasks:['less:server']
             }
@@ -249,19 +190,15 @@ module.exports=function(grunt){
 
     grunt.registerTask('serve',[
         'clean:server'
-      , 'replace:app'
       , 'concurrent:server'
-      , 'neuter:app'
       , 'connect:livereload'
       , 'watch'
     ]);
 
     grunt.registerTask('build',[
         'clean:dist'
-      , 'replace:dist'
       , 'useminPrepare'
       , 'concurrent:dist'
-      , 'neuter:app'
       , 'concat'
       , 'uglify'
       , 'copy'
