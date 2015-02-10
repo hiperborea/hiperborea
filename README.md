@@ -1,4 +1,4 @@
-hiperborea
+hiperbórea
 ==========
 
-oficial website for hiperborea corp.
+Official website for hiperborea corp.

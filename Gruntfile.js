@@ -6,37 +6,44 @@ module.exports=function(grunt){
 
     grunt.initConfig({
         clean:{
-            server:'.tmp'
-          , dist:{
-                files:[{
-                    dot:true
-                  , src:[
-                        '.tmp'
-                      , 'dist/*'
-                    ]
-                }]
-            }
+            devel:'.tmp'
+          , dist:'dist'
         }
       , concurrent:{
-            server:[
-                'less:server'
+            devel:[
+                'jade:devel'
+              , 'less:devel'
             ]
           , dist:[
-                'less:dist'
+                'jade:dist'
+              , 'less:dist'
               , 'symlink'
               , 'imagemin'
               , 'svgmin'
               , 'htmlmin:dist1'
             ]
         }
+      , jade:{
+            devel:{
+                options:{
+                    pretty:true
+                  , data:{
+                        debug:true
+                    }
+                }
+              , files:{
+                    '.tmp/index.html':'web/jade/index.jade'
+                }
+            }
+        }
       , less:{
-            server:{
+            devel:{
                 options:{
                     dumpLineNumbers:'all'
                   , paths:['bower_components']
                 }
               , files:{
-                    '.tmp/styles/style.css':'app/styles/style.less'
+                    '.tmp/style.css':'web/less/index.less'
                 }
             }
           , dist:{
@@ -57,11 +64,11 @@ module.exports=function(grunt){
             }
           , livereload:{
                 options:{
-                    base:['app']
+                    base:['.tmp']
                   , middleware:function(connect){
                         return [
                             connect.static('.tmp')
-                          , connect.static('app')
+                          , connect.static('public')
                           , connect().use('/vendor',
                                 connect.static('bower_components'))
                         ];
@@ -70,23 +77,25 @@ module.exports=function(grunt){
             }
         }
       , watch:{
-            less:{
-                files:['app/styles/{,*/}*.less']
-              , tasks:['less:server']
+            jade:{
+                files:['web/jade/*.jade']
+              , tasks:['jade:devel']
+            }
+          , less:{
+                files:['web/less/*.less']
+              , tasks:['less:devel']
             }
           , livereload:{
                 options:{
                     livereload:'<%= connect.options.livereload %>'
                 }
               , files:[
-                    '.tmp/scripts/*.js'
-                  , '.tmp/styles/*.css'
-                  , '.tmp/*.html'
-                  , 'app/*.html'
+                    '.tmp/index.html'
+                  , '.tmp/style.css'
                 ]
             }
         }
-      , useminPrepare:{
+/*      , useminPrepare:{
             html:'.tmp/index.html',
             options:{
                 dest:'dist'
@@ -106,7 +115,7 @@ module.exports=function(grunt){
                 files:[{
                     expand:true
                   , cwd:'app/images'
-                  , src:'{,*/}*.{png,jpg,jpeg}'
+                  , src:'{,*+/}*.{png,jpg,jpeg}'
                   , dest:'dist/images'
                 }]
             }
@@ -116,7 +125,7 @@ module.exports=function(grunt){
                 files:[{
                     expand:true
                   , cwd:'app/images'
-                  , src:'{,*/}*.svg'
+                  , src:'{,*+/}*.svg'
                   , dest:'dist/images'
                 }]
             }
@@ -127,7 +136,7 @@ module.exports=function(grunt){
               , files:[{
                     expand:true
                   , cwd:'app'
-                  , src:'{,*/}*.html'
+                  , src:'{,*+/}*.html'
                   , dest:'dist'
                 }]
             }
@@ -145,7 +154,7 @@ module.exports=function(grunt){
               , files:[{
                     expand:true
                   , cwd:'dist'
-                  , src:'{,*/}*.html'
+                  , src:'{,*+/}*.html'
                   , dest:'dist'
                 }]
             }
@@ -154,7 +163,7 @@ module.exports=function(grunt){
             dist:{
                 files:{
                     'dist/styles/main.css':[
-                        '.tmp/styles/{,*/}*.css'
+                        '.tmp/styles/{,*+/}*.css'
                     ]
                 }
             }
@@ -171,32 +180,32 @@ module.exports=function(grunt){
             dist:{
                 files:{
                     src:[
-                        'dist/scripts/{,*/}*.js'
-                      , 'dist/styles/{,*/}*.css'
-                      , 'dist/images/{,*/}*.{png,jpg,jpeg,gif,webp}'
+                        'dist/scripts/{,*+/}*.js'
+                      , 'dist/styles/{,*+/}*.css'
+                      , 'dist/images/{,*+/}*.{png,jpg,jpeg,gif,webp}'
                       , 'dist/styles/fonts/*'
                     ]
                 }
             }
         }
       , usemin:{
-            html:['dist/{,*/}*.html']
-          , css:['dist/styles/{,*/}*.css']
+            html:['dist/{,*+/}*.html']
+          , css:['dist/styles/{,*+/}*.css']
           , options:{
                 dirs:['dist']
             }
-        }
+        }*/
     });
 
     grunt.registerTask('serve',[
-        'clean:server'
-      , 'concurrent:server'
+        'clean:devel'
+      , 'concurrent:devel'
       , 'connect:livereload'
       , 'watch'
     ]);
 
     grunt.registerTask('build',[
-        'clean:dist'
+/*        'clean:dist'
       , 'useminPrepare'
       , 'concurrent:dist'
       , 'concat'
@@ -204,7 +213,7 @@ module.exports=function(grunt){
       , 'copy'
       , 'rev'
       , 'usemin'
-      , 'htmlmin:dist2'
+      , 'htmlmin:dist2'*/
     ]);
 };
 
