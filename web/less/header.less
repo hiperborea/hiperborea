@@ -1,0 +1,46 @@
+header {
+    position: fixed;
+    float: left;
+    width: 100%;
+    top: -3.2rem;
+
+    nav {
+        float: left;
+        width: 100%;
+        background-color: @color_blue;
+        box-shadow: 0rem 0rem 0.5rem #000000;
+
+        @media (max-width: 499px) {
+            ul.right {
+                display: none;
+            }
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                float: left;
+                a {
+                    .font1(1.4rem);
+                    color: #ffffff;
+                    text-decoration: none;
+                    float: left;
+                    padding: 0.8rem 1.2rem;
+                }
+            }
+        }
+
+        ul.left {
+            float: left;
+            margin-left: 1.0rem;
+        }
+        ul.right {
+            float: right;
+            margin-right: 1.0rem;
+        }
+    }
+}
+

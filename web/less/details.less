@@ -1,0 +1,80 @@
+section#details {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 0 1.5rem 0;
+
+    background-color: @color_blue;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: stretch;
+
+    div.col {
+        @media (min-width: 900px) {
+            max-width: 26.0rem;
+        }
+        @media (min-width: 600px) and (max-width: 899px) {
+            max-width: 18.0rem;
+        }
+        @media (max-width: 599px) {
+            max-width: 40rem;
+            padding: 0em 2.0em;
+        }
+
+        color: #ffffff;
+        h3>a {
+            color: @color_gray;
+            text-align: center;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: bold;
+            @media (min-width: 900px) {
+                .font1(2.0rem);
+            }
+            @media (min-width: 500px) and (max-width: 899px) {
+                .font1(1.3rem);
+            }
+            @media (max-width: 499px) {
+                .font1(1.3rem);
+            }
+
+            &:hover {
+                color: lighten(spin(@color_blue,180),10%);
+            }
+        }
+        p {
+            line-height: 2.25rem;
+            margin-bottom: 1.2rem;
+            @media (min-width: 900px) {
+                .font1(1.75rem);
+            }
+            @media (min-width: 500px) and (max-width: 899px) {
+                .font1(1.3rem);
+            }
+            @media (max-width: 499px) {
+                .font1(1.3rem);
+            }
+        }
+        ul {
+            padding-left: 1.5rem;
+            list-style: none;
+            li {
+                font-weight: normal;
+                line-height: 2.5rem;
+                @media (min-width: 900px) {
+                    .font1(1.65rem);
+                }
+                @media (min-width: 500px) and (max-width: 899px) {
+                    .font1(1.3rem);
+                }
+                @media (max-width: 499px) {
+                    .font1(1.3rem);
+                }
+            }
+        }
+    }
+}
+

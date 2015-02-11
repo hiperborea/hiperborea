@@ -1,0 +1,80 @@
+section#logo {
+    margin: 32px 0;
+
+    @logo_width: 616px;
+    @logo_height: 192px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: strech;
+    align-items: center;
+
+    .logo {
+        .generic(@width;@height) {
+            background-image: url('/images/logo.svg');
+            background-size: 100%;
+            width: @width;
+            height: @height;
+        }
+        .gray(@height) {
+            float:left;
+            background-position: 0px @height;
+            animation: rotation1 12s linear infinite;
+            -webkit-animation: rotation1 12s linear infinite;
+            z-index: 10;
+        }
+        .blue {
+            animation: rotation2 12s linear infinite;
+            -webkit-animation: rotation2 12s linear infinite;
+            z-index: 20;
+        }
+
+        @media (min-width: 900px) {
+            width: @logo_height;
+            height: @logo_height;
+            div.gray {
+                .generic(@logo_height,@logo_height);
+                .gray(@logo_height);
+            }
+            div.blue {
+                .generic(@logo_height,@logo_height);
+            }
+        }
+        @media (min-width: 500px) and (max-width: 899px) {
+            width: @logo_height/1.5;
+            height: @logo_height/1.5;
+            div.gray {
+                .generic(@logo_height/1.5,@logo_height/1.5);
+                .gray(@logo_height/1.5);
+            }
+            div.blue {
+                .generic(@logo_height/1.5,@logo_height/1.5);
+            }
+        }
+        @media (max-width: 499px) {
+            display: none;
+        }
+    }
+
+    .text {
+        background-image: url('/images/text.svg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+
+        @media (min-width: 900px) {
+            width: @logo_width;
+            height: @logo_height;
+        }
+        @media (min-width: 500px) and (max-width: 899px) {
+            width: @logo_width/1.5;
+            height: @logo_height/1.5;
+        }
+        @media (max-width: 499px) {
+            width: @logo_width/2.5;
+            height: @logo_height/2.5;
+        }
+    }
+}
+
