@@ -1,8 +1,7 @@
-section#front {
+section#topics {
     @logo_width: 616px;
     @logo_height: 192px;
 
-    height: 75vh;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -10,78 +9,7 @@ section#front {
     align-content: strech;
     align-items: center;
 
-    div.wrapper {
-        margin-top: 10vh;
-        text-align: center;
-
-        div.text {
-            background-image: url('/images/text.svg');
-            background-size: 100%;
-            display: inline-block;
-
-            @media (min-width: 900px) {
-                width: @logo_width;
-                height: @logo_height;
-            }
-            @media (min-width: 500px) and (max-width: 899px) {
-                width: @logo_width/1.5;
-                height: @logo_height/1.5;
-            }
-            @media (max-width: 499px) {
-                width: @logo_width/2.5;
-                height: @logo_height/2.5;
-            }
-        }
-
-        div.logo {
-            display: inline-block;
-            .generic(@width;@height) {
-                background-image: url('/images/logo.svg');
-                background-size: 100%;
-                width: @width;
-                height: @height;
-            }
-            .gray(@height) {
-                float:left;
-                background-position: 0px @height;
-                animation: rotation1 12s linear infinite;
-                z-index: 10;
-            }
-            .blue {
-                animation: rotation2 12s linear infinite;
-                z-index: 20;
-            }
-
-            @media (min-width: 900px) {
-                width: @logo_height;
-                height: @logo_height;
-                div.gray {
-                    .generic(@logo_height,@logo_height);
-                    .gray(@logo_height);
-                }
-                div.blue {
-                    .generic(@logo_height,@logo_height);
-                }
-            }
-            @media (min-width: 500px) and (max-width: 899px) {
-                width: @logo_height/1.5;
-                height: @logo_height/1.5;
-                div.gray {
-                    .generic(@logo_height/1.5,@logo_height/1.5);
-                    .gray(@logo_height/1.5);
-                }
-                div.blue {
-                    .generic(@logo_height/1.5,@logo_height/1.5);
-                }
-            }
-            @media (max-width: 499px) {
-                display: none;
-            }
-        }
-    }
-
-    div.icons {
-        padding-top: 5vh;
+    .icons {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -89,14 +17,13 @@ section#front {
         align-content: strech;
         align-items: center;
 
-        @logo_width: 100px;
-        @logo_height: 100px;
+        @logo_width: 96px;
+        @logo_height: 96px;
 
         &>div {
-            text-align: center;
             padding: 0rem 2.0rem;
 
-            div.logo {
+            .logo {
                 margin: 0 auto;
                 background-image: url('/images/icons.svg');
                 background-size: 100%;
@@ -121,13 +48,13 @@ section#front {
                     height: @logo_height/2.5;
                 }
             }
-            div.text {
+            .text {
                 padding-top: 1.0rem;
                 font-weight: bold;
 
                 span {
                     @media (min-width: 900px) {
-                        .font1(1.8rem);
+                        .font1(1.6rem);
                     }
                     @media (min-width: 500px) and (max-width: 899px) {
                         .font1(1.4rem);
@@ -160,6 +87,7 @@ section#front {
                 color: lighten(@color_blue,10%);
             }
         }
+
         div.development {
             div.logo {
                 background-color: lighten(@color_blue,20%);
@@ -181,6 +109,7 @@ section#front {
                 color: lighten(@color_blue,20%);
             }
         }
+
         div.sysadmin {
             div.logo {
                 background-color: lighten(@color_blue,30%);
