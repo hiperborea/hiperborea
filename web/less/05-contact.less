@@ -50,9 +50,17 @@ section#contact {
 
     div.right {
         ul {
+            float: left;
             list-style: none;
             color: #ffffff;
-            margin: 0em 2.0em;
+
+            @media (min-width: 391px) {
+                margin: 0 2.0em;
+            }
+
+            @media (max-width: 390px) {
+                margin: 0;
+            }
 
             li {
                 float: left;

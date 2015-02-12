@@ -1,15 +1,22 @@
-<header data-0="top: -3.3rem;" data-250="top:0rem;">
-    <nav>
-        <ul class="left">
-            <li>{{#link-to "index"}}Hiperbórea{{/link-to}}</li>
-        </ul>
-        <ul class="right">
-            <li>{{#link-to "security"}}Seguridad{{/link-to}}</li>
-            <li>{{#link-to "development"}}Desarrollo{{/link-to}}</li>
-            <li>{{#link-to "sysadmin"}}Infraestructura IT{{/link-to}}</li>
-            <li><a href="http://blog.hiperborea.com.bo"
-                   target="_BLANK">Blog</a></li>
-        </ul>
-    </nav>
-</header>
+header(data-start='top: -3.5rem;',data-top-bottom='top:0rem;',data-anchor-target='#contact')
+    nav
+        ul.left
+            li: a(href='') Hiperbórea
+        ul.right
+            li
+                a(href='#security',title='Seguridad Informática')
+                    .icon.security
+                    .text Seguridad
+            li
+                a(href='#development',title='Desarrollo de Sistemas')
+                    .icon.development
+                    .text Desarrollo
+            li
+                a(href='#sysadmin',title='Infraestructura IT')
+                    .icon.sysadmin
+                    .text Infraestructura IT
+            li
+                a(href='http://blog.hiperborea.com.bo',target='_BLANK',title='Blog hiperbórea')
+                    .icon.ghost
+                    .text Blog
 

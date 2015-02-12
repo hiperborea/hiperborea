@@ -1,20 +1,13 @@
 header {
     position: fixed;
-    float: left;
     width: 100%;
-    top: -3.2rem;
+    z-index: 30;
 
     nav {
         float: left;
         width: 100%;
         background-color: @color_blue;
         box-shadow: 0rem 0rem 0.5rem #000000;
-
-        @media (max-width: 499px) {
-            ul.right {
-                display: none;
-            }
-        }
 
         ul {
             list-style: none;
@@ -24,11 +17,15 @@ header {
             li {
                 float: left;
                 a {
-                    .font1(1.4rem);
                     color: #ffffff;
                     text-decoration: none;
                     float: left;
                     padding: 0.8rem 1.2rem;
+                    .font1(1.4rem);
+
+                    .text {
+                        .font1(1.4rem);
+                    }
                 }
             }
         }
@@ -40,6 +37,35 @@ header {
         ul.right {
             float: right;
             margin-right: 1.0rem;
+
+            @media (max-width: 499px) {
+                li {
+                    a {
+                        .text {
+                            display: none;
+                        }
+                        .icon {
+                            width: 22px;
+                            height: 22px;
+                            background-image: url(/images/icons.svg);
+                            background-size: 100%;
+                        }
+
+                        .security {
+                            background-position: 0 22px;
+                        }
+
+                        .development {
+                            background-position: 0 44px;
+                        }
+
+                        .ghost {
+                            background-image: url(/images/icons2.svg);
+                            background-position: 0 22px;
+                        }
+                    }
+                }
+            }
         }
     }
 }

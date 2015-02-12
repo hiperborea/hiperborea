@@ -5,9 +5,7 @@
   , "dependencies":{
         "jquery":"~2.1.3"
       , "normalize-less":"*"
-      , "font-awesome":"~4.2.0"
       , "skrollr":"~0.6.26"
-      , "skrollr-stylesheets":"~0.0.6"
       , "skrollr-menu":"~0.1.12"
     }
   , "devDependencies":{}

@@ -26,6 +26,7 @@ section#topics {
             padding: 0rem 2.0rem;
 
             .logo {
+                display: block;
                 margin: 0 auto;
                 background-image: url('/images/icons.svg');
                 background-size: 100%;
@@ -68,8 +69,8 @@ section#topics {
             }
         }
 
-        div.security {
-            div.logo {
+        .security {
+            .logo {
                 background-color: lighten(@color_blue,10%);
                 &:hover {
                     background-color: spin(lighten(@color_blue,30%),180);
@@ -90,8 +91,8 @@ section#topics {
             }
         }
 
-        div.development {
-            div.logo {
+        .development {
+            .logo {
                 background-color: lighten(@color_blue,20%);
                 &:hover {
                     background-color: spin(lighten(@color_blue,30%),180);
@@ -112,8 +113,8 @@ section#topics {
             }
         }
 
-        div.sysadmin {
-            div.logo {
+        .sysadmin {
+            .logo {
                 background-color: lighten(@color_blue,30%);
                 background-position: 0px 0px;
                 &:hover {
