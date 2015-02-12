@@ -1,0 +1,102 @@
+section#contact {
+    padding: 16px 0;
+    background-color: darken(@color_blue,5%);
+
+    .grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: stretch;
+    }
+
+    div.left {
+        margin-left: 1.0rem;
+
+        dl {
+            color: #ffffff;
+            margin: 0rem;
+
+            dt {
+                float: left;
+
+                @media (min-width: 900px) {
+                    .font1(1.4rem);
+                }
+                @media (min-width: 500px) and (max-width: 899px) {
+                    .font1(1.2rem);
+                }
+                @media (max-width: 499px) {
+                    .font1(1.2rem);
+                }
+            }
+            dd {
+                @media (min-width: 900px) {
+                    padding-left: 9.0rem;
+                    .font1(1.4rem);
+                }
+                @media (min-width: 500px) and (max-width: 899px) {
+                    padding-left: 6.0rem;
+                    .font1(1.2rem);
+                }
+                @media (max-width: 499px) {
+                    padding-left: 6.0rem;
+                    .font1(1.2rem);
+                }
+            }
+        }
+    }
+
+    div.right {
+        ul {
+            list-style: none;
+            color: #ffffff;
+            margin: 0em 2.0em;
+
+            li {
+                float: left;
+                padding: 0em 0.2em;
+
+                a {
+                    float: left;
+                    color: inherit;
+                    text-decoration: none;
+
+                    @logo_width: 56px;
+                    @logo_height: 56px;
+
+                    background-image: url(/images/icons2.svg);
+                    background-size: 100%;
+
+                    @media (min-width: 900px) {
+                        width: @logo_width;
+                        height: @logo_height;
+                    }
+                    @media (min-width: 500px) and (max-width: 899px) {
+                        width: @logo_width/1.5;
+                        height: @logo_height/1.5;
+                    }
+                    @media (max-width: 499px) {
+                        width: @logo_width/2;
+                        height: @logo_height/2;
+                    }
+
+                    &.github {}
+                    &.ghost {
+                        @media (min-width: 900px) {
+                            background-position: 0px @logo_width;
+                        }
+                        @media (min-width: 500px) and (max-width: 899px) {
+                            background-position: 0px @logo_width/1.5;
+                        }
+                        @media (max-width: 499px) {
+                            background-position: 0px @logo_width/2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

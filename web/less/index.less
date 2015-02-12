@@ -12,7 +12,6 @@ body {
 #wrapper {
     width: 100%;
     margin: 0 auto;
-    max-width: 960px;
 
     display:flex;
     flex-direction:column;
@@ -22,14 +21,26 @@ body {
     align-content:stretch;
 }
 
+.grid {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
 .clearfix {
     clear: both;
+}
+
+a {
+    cursor: pointer;
+
+    &:outline {
+        border: none;
+    }
 }
 
 @import '01-logo.less';
 @import '02-topics.less';
 @import '03-about.less';
-
-//@import 'details.less';
-//@import 'contact.less';
+@import '04-details.less';
+@import '05-contact.less';
 
