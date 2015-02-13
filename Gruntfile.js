@@ -17,7 +17,6 @@ module.exports=function(grunt){
           , dist:[
                 'jade:dist'
               , 'less:dist'
-              , 'symlink'
               , 'imagemin:dist'
               , 'svgmin:dist'
             ]
@@ -31,7 +30,7 @@ module.exports=function(grunt){
                     }
                 }
               , files:{
-                    '.tmp/index.html':'web/jade/index.jade'
+                    '.tmp/index.html':'web/jade/dev.jade'
                 }
             }
           , dist:{
@@ -39,7 +38,7 @@ module.exports=function(grunt){
                     pretty:false
                 }
               , files:{
-                    '.tmp/index.html':'web/jade/index.jade'
+                    '.tmp/index.html':'web/jade/prod.jade'
                 }
             }
         }
@@ -102,21 +101,6 @@ module.exports=function(grunt){
                 ]
             }
         }
-/*      , useminPrepare:{
-            html:'.tmp/index.html',
-            options:{
-                dest:'dist'
-            }
-        }*/
-      , symlink:{
-            options:{
-                overwrite:false
-            }
-          , explicit:{
-                src:'bower_components'
-              , dest:'.tmp/vendor'
-            }
-        }
       , imagemin:{
             dist:{
                 files:[{
@@ -137,45 +121,56 @@ module.exports=function(grunt){
                 }]
             }
         }
+      , symlink:{
+            options:{
+                overwrite:false
+            }
+          , explicit:{
+                src:'bower_components'
+              , dest:'.tmp/vendor'
+            }
+        }
+      , concat:{
+            options:{
+                separator:';'
+            }
+          , dist:{
+                src:[
+                    '.tmp/vendor/skrollr/dist/skrollr.min.js'
+                  , '.tmp/vendor/skrollr-menu/dist/skrollr.menu.min.js'
+                  , 'public/js/app.js'
+                ]
+              , dest:'.tmp/script.js'
+            }
+        }
+      , uglify:{
+            dist:{
+                files:{
+                    'dist/script.js':['.tmp/script.js']
+                }
+            }
+        }
+      , cssmin:{
+            dist:{
+                files:{
+                    'dist/style.css':['.tmp/style.css']
+                }
+            }
+        }
       , htmlmin:{
             dist:{
                 options:{
                     collapseBooleanAttributes:true
                   , collapseWhitespace:true
                   , removeAttributeQuotes:true
+                  , removeComments:true
                   , removeCommentsFromCDATA:true
-                  , removeEmptyAttributes:true
-                  , removeOptionalTags:true
-                  , removeRedundantAttributes:true
-                  , useShortDoctype:true
                 }
-              , files:[{
-                    expand:true
-                  , cwd:'.tmp'
-                  , src:'*.html'
-                  , dest:'dist'
-                }]
-            }
-        }
-/*      , rev:{
-            dist:{
-                files:{
-                    src:[
-                        'dist/scripts/{,*+/}*.js'
-                      , 'dist/styles/{,*+/}*.css'
-                      , 'dist/images/{,*+/}*.{png,jpg,jpeg,gif,webp}'
-                      , 'dist/styles/fonts/*'
-                    ]
+              , files:{
+                    'dist/index.html':'.tmp/index.html'
                 }
             }
         }
-      , usemin:{
-            html:['dist/{,*+/}*.html']
-          , css:['dist/styles/{,*+/}*.css']
-          , options:{
-                dirs:['dist']
-            }
-        }*/
     });
 
     grunt.registerTask('serve',[
@@ -187,14 +182,12 @@ module.exports=function(grunt){
 
     grunt.registerTask('build',[
         'clean'
-/*      , 'useminPrepare'*/
       , 'concurrent:dist'
-/*      , 'concat'
+      , 'symlink'
+      , 'concat'
       , 'uglify'
-      , 'copy'
-      , 'rev'
-      , 'usemin'
-      , 'htmlmin'*/
+      , 'cssmin'
+      , 'htmlmin'
     ]);
 };
 
