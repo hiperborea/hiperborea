@@ -164,7 +164,6 @@ module.exports=function(grunt){
                   , collapseWhitespace:true
                   , removeAttributeQuotes:true
                   , removeComments:true
-                  , removeCommentsFromCDATA:true
                 }
               , files:{
                     'dist/index.html':'.tmp/index.html'
