@@ -1,5 +1,10 @@
 section#security {
-    background-color: #ce5543;
-    color: #ffffff;
+    @color_base: #ce5543;
+
+    background-color: @color_base;
+
+    h1, h2 {
+        color: darken(@color_base,45%);
+    }
 }
 

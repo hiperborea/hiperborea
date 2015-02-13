@@ -32,9 +32,10 @@ body {
 
 a {
     cursor: pointer;
+    outline: none;
 
-    &:outline {
-        border: none;
+    &:hover, &:focus {
+        background-color: darken(@color_blue,5%);
     }
 }
 

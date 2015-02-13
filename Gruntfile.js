@@ -20,7 +20,7 @@ module.exports=function(grunt){
               , 'symlink'
               , 'imagemin'
               , 'svgmin'
-              , 'htmlmin:dist1'
+              , 'htmlmin'
             ]
         }
       , jade:{

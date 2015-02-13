@@ -1,5 +1,10 @@
 section#development {
-    background-color: #8fbf3e;
-    color: #ffffff;
+    @color_base: #8fbf3e;
+
+    background-color: @color_base;
+
+    h1, h2 {
+        color: darken(@color_base,45%);
+    }
 }
 

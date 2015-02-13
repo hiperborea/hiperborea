@@ -1,5 +1,10 @@
 section#sysadmin {
-    background-color: #2e6882;
-    color: #ffffff;
+    @color_base: #2e6882;
+
+    background-color: @color_base;
+
+    h1, h2 {
+        color: darken(@color_base,45%);
+    }
 }
 
