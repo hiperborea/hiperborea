@@ -4,25 +4,60 @@ section#sysadmin {
     padding: 0 0.5rem;
     color: #101010;
 
+    .cols {
+        @media (min-width: 700px) {
+            float: left;
+            width: 30%;
+            margin-right: 3.333%;
+        }
+        @media (min-width: 500px) and (max-width: 699px) {
+            float: left;
+            width: 46%;
+            margin-right: 4%;
+        }
+        @media (max-width: 499px) {
+            width: 100%;
+            padding: 0 0.5rem;
+            box-sizing: border-box;
+        }
+    }
+
     h1 {
-        .font1(1.75rem);
+        .font1(1.9rem);
         margin: 2.0rem 0;
         text-transform: uppercase;
     }
 
     h2 {
-        .font1(1.50rem);
+        .font1(1.70rem);
         text-transform: uppercase;
     }
 
     p {
-        .font1(1.6rem);
         line-height: 2.2rem;
+        text-align: justify;
+        @media (min-width: 900px) {
+            .font1(1.6rem);
+        }
+        @media (min-width: 500px) and (max-width: 899px) {
+            .font1(1.4rem);
+        }
+        @media (max-width: 499px) {
+            .font1(1.2rem);
+        }
     }
 
     ul {
         li {
-            .font1(1.6rem);
+            @media (min-width: 900px) {
+                .font1(1.6rem);
+            }
+            @media (min-width: 500px) and (max-width: 899px) {
+                .font1(1.4rem);
+            }
+            @media (max-width: 499px) {
+                .font1(1.2rem);
+            }
         }
     }
 }

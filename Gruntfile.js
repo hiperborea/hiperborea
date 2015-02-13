@@ -18,9 +18,8 @@ module.exports=function(grunt){
                 'jade:dist'
               , 'less:dist'
               , 'symlink'
-              , 'imagemin'
-              , 'svgmin'
-              , 'htmlmin'
+              , 'imagemin:dist'
+              , 'svgmin:dist'
             ]
         }
       , jade:{
@@ -30,6 +29,14 @@ module.exports=function(grunt){
                   , data:{
                         debug:true
                     }
+                }
+              , files:{
+                    '.tmp/index.html':'web/jade/index.jade'
+                }
+            }
+          , dist:{
+                options:{
+                    pretty:false
                 }
               , files:{
                     '.tmp/index.html':'web/jade/index.jade'
@@ -52,7 +59,7 @@ module.exports=function(grunt){
                   , paths:['bower_components']
                 }
               , files:{
-                    '.tmp/styles/style.css':'app/styles/style.less'
+                    '.tmp/style.css':'web/less/index.less'
                 }
             }
         }
@@ -100,7 +107,7 @@ module.exports=function(grunt){
             options:{
                 dest:'dist'
             }
-        }
+        }*/
       , symlink:{
             options:{
                 overwrite:false
@@ -114,7 +121,7 @@ module.exports=function(grunt){
             dist:{
                 files:[{
                     expand:true
-                  , cwd:'app/images'
+                  , cwd:'public/images'
                   , src:'{,*+/}*.{png,jpg,jpeg}'
                   , dest:'dist/images'
                 }]
@@ -124,23 +131,14 @@ module.exports=function(grunt){
             dist:{
                 files:[{
                     expand:true
-                  , cwd:'app/images'
+                  , cwd:'public/images'
                   , src:'{,*+/}*.svg'
                   , dest:'dist/images'
                 }]
             }
         }
       , htmlmin:{
-            dist1:{
-                options:{}
-              , files:[{
-                    expand:true
-                  , cwd:'app'
-                  , src:'{,*+/}*.html'
-                  , dest:'dist'
-                }]
-            }
-          , dist2:{
+            dist:{
                 options:{
                     collapseBooleanAttributes:true
                   , collapseWhitespace:true
@@ -153,30 +151,13 @@ module.exports=function(grunt){
                 }
               , files:[{
                     expand:true
-                  , cwd:'dist'
-                  , src:'{,*+/}*.html'
+                  , cwd:'.tmp'
+                  , src:'*.html'
                   , dest:'dist'
                 }]
             }
         }
-      , cssmin:{
-            dist:{
-                files:{
-                    'dist/styles/main.css':[
-                        '.tmp/styles/{,*+/}*.css'
-                    ]
-                }
-            }
-        }
-      , copy:{
-            dist:{
-                expand:true
-              , flatten:true
-              , src:'bower_components/font-awesome/fonts/*'
-              , dest:'dist/fonts/'
-            }
-        }
-      , rev:{
+/*      , rev:{
             dist:{
                 files:{
                     src:[
@@ -205,15 +186,15 @@ module.exports=function(grunt){
     ]);
 
     grunt.registerTask('build',[
-/*        'clean:dist'
-      , 'useminPrepare'
+        'clean'
+/*      , 'useminPrepare'*/
       , 'concurrent:dist'
-      , 'concat'
+/*      , 'concat'
       , 'uglify'
       , 'copy'
       , 'rev'
       , 'usemin'
-      , 'htmlmin:dist2'*/
+      , 'htmlmin'*/
     ]);
 };
 

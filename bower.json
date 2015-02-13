@@ -7,6 +7,7 @@
       , "normalize-less":"*"
       , "skrollr":"~0.6.26"
       , "skrollr-menu":"~0.1.12"
+      , "skrollr-stylesheets": "~1.0.0"
     }
   , "devDependencies":{}
 }

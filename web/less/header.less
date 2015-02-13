@@ -3,6 +3,19 @@ header {
     width: 100%;
     z-index: 30;
 
+    -skrollr-animation-name: menu;
+    -skrollr-anchor-target: '#contact';
+
+    @-skrollr-keyframes menu {
+        start {
+            top: -3.5rem;
+        }
+
+        top-bottom {
+            top: 0rem;
+        }
+    }
+
     nav {
         float: left;
         width: 100%;
