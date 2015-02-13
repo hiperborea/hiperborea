@@ -170,6 +170,17 @@ module.exports=function(grunt){
                 }
             }
         }
+      , copy:{
+            dist:{
+                files:[{
+                    src:'public/favicon.ico'
+                  , dest:'dist/favicon.ico'
+                },{
+                    src:'public/robots.txt'
+                  , dest:'dist/robots.txt'
+                }]
+            }
+        }
     });
 
     grunt.registerTask('serve',[
@@ -187,6 +198,7 @@ module.exports=function(grunt){
       , 'uglify'
       , 'cssmin'
       , 'htmlmin'
+      , 'copy'
     ]);
 };
 
