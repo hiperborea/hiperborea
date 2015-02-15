@@ -121,23 +121,14 @@ module.exports=function(grunt){
                 }]
             }
         }
-      , symlink:{
-            options:{
-                overwrite:false
-            }
-          , explicit:{
-                src:'bower_components'
-              , dest:'.tmp/vendor'
-            }
-        }
       , concat:{
             options:{
                 separator:';'
             }
           , dist:{
                 src:[
-                    '.tmp/vendor/skrollr/dist/skrollr.min.js'
-                  , '.tmp/vendor/skrollr-menu/dist/skrollr.menu.min.js'
+                    'bower_components/skrollr/dist/skrollr.min.js'
+                  , 'bower_components/skrollr-menu/dist/skrollr.menu.min.js'
                   , 'public/js/app.js'
                 ]
               , dest:'.tmp/script.js'
@@ -178,6 +169,9 @@ module.exports=function(grunt){
                 },{
                     src:'public/robots.txt'
                   , dest:'dist/robots.txt'
+                },{
+                    src:'public/sitemap.xml'
+                  , dest:'dist/sitemap.xml'
                 }]
             }
         }
@@ -193,7 +187,6 @@ module.exports=function(grunt){
     grunt.registerTask('build',[
         'clean'
       , 'concurrent:dist'
-      , 'symlink'
       , 'concat'
       , 'uglify'
       , 'cssmin'
