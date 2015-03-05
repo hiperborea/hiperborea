@@ -1,0 +1,88 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save-dev',
+1 verbose cli   'grunt-contrib-svgmin' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.36
+4 verbose readDependencies using package.json deps
+5 verbose cache add [ 'grunt-contrib-svgmin', null ]
+6 verbose cache add name=undefined spec="grunt-contrib-svgmin" args=["grunt-contrib-svgmin",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'grunt-contrib-svgmin',
+7 verbose parsed url   path: 'grunt-contrib-svgmin',
+7 verbose parsed url   href: 'grunt-contrib-svgmin' }
+8 silly lockFile ada7a6db-grunt-contrib-svgmin grunt-contrib-svgmin
+9 verbose lock grunt-contrib-svgmin /home/jacobian/.npm/ada7a6db-grunt-contrib-svgmin.lock
+10 silly lockFile ada7a6db-grunt-contrib-svgmin grunt-contrib-svgmin
+11 silly lockFile ada7a6db-grunt-contrib-svgmin grunt-contrib-svgmin
+12 verbose addNamed [ 'grunt-contrib-svgmin', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile 7d92555b-grunt-contrib-svgmin grunt-contrib-svgmin@
+15 verbose lock grunt-contrib-svgmin@ /home/jacobian/.npm/7d92555b-grunt-contrib-svgmin.lock
+16 silly addNameRange { name: 'grunt-contrib-svgmin', range: '*', hasData: false }
+17 verbose request where is /grunt-contrib-svgmin
+18 verbose request registry https://registry.npmjs.org/
+19 verbose request id 4fb72391c7067043
+20 verbose url raw /grunt-contrib-svgmin
+21 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-svgmin' ]
+22 verbose url resolved https://registry.npmjs.org/grunt-contrib-svgmin
+23 verbose request where is https://registry.npmjs.org/grunt-contrib-svgmin
+24 info trying registry request attempt 1 at 19:32:59
+25 http GET https://registry.npmjs.org/grunt-contrib-svgmin
+26 http 404 https://registry.npmjs.org/grunt-contrib-svgmin
+27 verbose headers { date: 'Sun, 15 Feb 2015 23:34:35 GMT',
+27 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+27 verbose headers   'content-type': 'application/json',
+27 verbose headers   'cache-control': 'max-age=0',
+27 verbose headers   'content-length': '52',
+27 verbose headers   'accept-ranges': 'bytes',
+27 verbose headers   via: '1.1 varnish',
+27 verbose headers   age: '0',
+27 verbose headers   'x-served-by': 'cache-jfk1032-JFK',
+27 verbose headers   'x-cache': 'MISS',
+27 verbose headers   'x-cache-hits': '0',
+27 verbose headers   'x-timer': 'S1424043274.929294,VS0,VE356',
+27 verbose headers   'keep-alive': 'timeout=10, max=50',
+27 verbose headers   connection: 'Keep-Alive' }
+28 silly registry.get cb [ 404,
+28 silly registry.get   { date: 'Sun, 15 Feb 2015 23:34:35 GMT',
+28 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+28 silly registry.get     'content-type': 'application/json',
+28 silly registry.get     'cache-control': 'max-age=0',
+28 silly registry.get     'content-length': '52',
+28 silly registry.get     'accept-ranges': 'bytes',
+28 silly registry.get     via: '1.1 varnish',
+28 silly registry.get     age: '0',
+28 silly registry.get     'x-served-by': 'cache-jfk1032-JFK',
+28 silly registry.get     'x-cache': 'MISS',
+28 silly registry.get     'x-cache-hits': '0',
+28 silly registry.get     'x-timer': 'S1424043274.929294,VS0,VE356',
+28 silly registry.get     'keep-alive': 'timeout=10, max=50',
+28 silly registry.get     connection: 'Keep-Alive' } ]
+29 silly lockFile 7d92555b-grunt-contrib-svgmin grunt-contrib-svgmin@
+30 silly lockFile 7d92555b-grunt-contrib-svgmin grunt-contrib-svgmin@
+31 error 404 404 Not Found: grunt-contrib-svgmin
+31 error 404
+31 error 404 'grunt-contrib-svgmin' is not in the npm registry.
+31 error 404 You should bug the author to publish it
+31 error 404 It was specified as a dependency of 'hiperborea'
+31 error 404
+31 error 404 Note that you can also install from a
+31 error 404 tarball, folder, or http url, or git url.
+32 error System Linux 3.18.2-gentoo
+33 error command "/usr/bin/node" "/usr/bin/npm" "install" "--save-dev" "grunt-contrib-svgmin"
+34 error cwd /var/www/hiperborea
+35 error node -v v0.10.36
+36 error npm -v 1.4.28
+37 error code E404
+38 verbose exit [ 1, true ]
