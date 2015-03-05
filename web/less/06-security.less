@@ -1,12 +1,20 @@
 section#security {
-    @color_base: #ce5543;
+    .grid {
+        .cols {
+            background-repeat: no-repeat;
+            background-size: 50% auto;
 
-    background-color: @color_base;
+            &:nth-child(even) {
+                background-position: 100% 0;
+            }
+            &:nth-child(odd) {
+                background-position: 0% 0;
+            }
 
-    h1, h2 {
-        color: darken(@color_base,25%);
-        text-shadow: 1px 1px 1px #000000;
-        clear: both;
+            &.security1 {
+                background-image: url('/images/security1.svg');
+            }
+        }
     }
 }
 
