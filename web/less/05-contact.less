@@ -12,6 +12,20 @@ section#contact {
         align-items: stretch;
     }
 
+    .address, .phone, .email {
+        background-image: url(/images/icons3.svg);
+        background-size: 100%;
+    }
+    .address {
+        background-position: 0 0;
+    }
+    .phone {
+        background-position: 0 75px;
+    }
+    .email {
+        background-position: 0 50px;
+    }
+
     div.left {
         margin-left: 1.0rem;
 
@@ -21,28 +35,20 @@ section#contact {
 
             dt {
                 float: left;
-
-                @media (min-width: 900px) {
-                    .font1(1.4rem);
-                }
-                @media (min-width: 500px) and (max-width: 899px) {
-                    .font1(1.2rem);
-                }
-                @media (max-width: 499px) {
-                    .font1(1.2rem);
-                }
+                width: 2.0rem;
+                height: 2.0rem;
             }
             dd {
                 @media (min-width: 900px) {
-                    padding-left: 9.0rem;
+                    padding: 0.35rem 0;
                     .font1(1.4rem);
                 }
                 @media (min-width: 500px) and (max-width: 899px) {
-                    padding-left: 6.0rem;
+                    padding: 0.35rem 0;
                     .font1(1.2rem);
                 }
                 @media (max-width: 499px) {
-                    padding-left: 6.0rem;
+                    padding: 0.35rem 0;
                     .font1(1.2rem);
                 }
             }
