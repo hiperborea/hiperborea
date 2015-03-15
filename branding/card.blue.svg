@@ -16,7 +16,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="card.svg">
+   sodipodi:docname="card.blue.svg">
   <defs
      id="defs4">
     <inkscape:perspective
@@ -48,20 +48,20 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.46875"
-     inkscape:cx="61.562426"
-     inkscape:cy="127.75357"
+     inkscape:zoom="1.992881"
+     inkscape:cx="65.009996"
+     inkscape:cy="154.34359"
      inkscape:document-units="cm"
-     inkscape:current-layer="layer7"
+     inkscape:current-layer="layer4"
      showgrid="false"
      units="cm"
      inkscape:showpageshadow="false"
      showguides="false"
      inkscape:guide-bbox="true"
-     inkscape:window-width="1914"
-     inkscape:window-height="1055"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-width="1635"
+     inkscape:window-height="999"
+     inkscape:window-x="-3"
+     inkscape:window-y="-3"
      inkscape:window-maximized="0"
      objecttolerance="10"
      inkscape:snap-path-clip="true"
@@ -131,7 +131,8 @@
   <g
      inkscape:groupmode="layer"
      id="layer7"
-     inkscape:label="extra">
+     inkscape:label="extra"
+     sodipodi:insensitive="true">
     <g
        sodipodi:type="inkscape:box3d"
        id="g3459"
