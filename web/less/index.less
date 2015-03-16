@@ -4,6 +4,7 @@
 
 @color_blue: #002255;
 @color_gray: #b3b3b3;
+@color_white: #ffffff;
 
 body {
     background-image: url('/images/mosaic.svg');
@@ -46,13 +47,16 @@ a {
 }
 
 @import 'header.less';
-@import '01-logo.less';
-@import '02-topics.less';
-@import '03-about.less';
-@import '04-details.less';
-@import '05-contact.less';
 @import 'content.less';
-@import '06-security.less';
-@import '07-development.less';
-@import '08-sysadmin.less';
+
+@import 'index/01-logo.less';
+@import 'index/02-topics.less';
+@import 'index/03-about.less';
+@import 'index/04-details.less';
+@import 'index/05-contact.less';
+@import 'index/06-security.less';
+@import 'index/07-development.less';
+@import 'index/08-sysadmin.less';
+
+@import 'pricing/01-table.less';
 

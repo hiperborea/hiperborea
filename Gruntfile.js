@@ -30,7 +30,8 @@ module.exports=function(grunt){
                     }
                 }
               , files:{
-                    '.tmp/index.html':'web/jade/dev.jade'
+                    '.tmp/index.html':'web/jade/index-dev.jade'
+                  , '.tmp/pricing.html':'web/jade/pricing-dev.jade'
                 }
             }
           , dist:{
@@ -38,7 +39,8 @@ module.exports=function(grunt){
                     pretty:false
                 }
               , files:{
-                    '.tmp/index.html':'web/jade/prod.jade'
+                    '.tmp/index.html':'web/jade/index-prod.jade'
+                  , '.tmp/pricing.html':'web/jade/pricing-prod.jade'
                 }
             }
         }
@@ -84,11 +86,11 @@ module.exports=function(grunt){
         }
       , watch:{
             jade:{
-                files:['web/jade/*.jade']
+                files:['web/jade/**/*.jade']
               , tasks:['jade:devel']
             }
           , less:{
-                files:['web/less/*.less']
+                files:['web/less/**/*.less']
               , tasks:['less:devel']
             }
           , livereload:{
@@ -97,6 +99,7 @@ module.exports=function(grunt){
                 }
               , files:[
                     '.tmp/index.html'
+                  , '.tmp/princing.html'
                   , '.tmp/style.css'
                 ]
             }

@@ -1,4 +1,4 @@
-header {
+header#front {
     position: fixed;
     width: 100%;
     z-index: 30;
@@ -30,7 +30,7 @@ header {
             li {
                 float: left;
                 a {
-                    color: #ffffff;
+                    color: @color_white;
                     text-decoration: none;
                     float: left;
                     padding: 0.8rem 1.2rem;
@@ -81,5 +81,11 @@ header {
             }
         }
     }
+}
+
+header#extra {
+    background-color: @color_blue;
+    width: 100%;
+    height: 5.0rem;
 }
 
