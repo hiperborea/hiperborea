@@ -1,8 +1,32 @@
 section#security,
 section#development,
 section#sysadmin {
-    padding: 0 0.5rem;
     color: #101010;
+
+    .title {
+        .border(border1);
+        width: 100%;
+        margin-top: 1.0rem;
+        background-color: darken(@color_green,5%);
+
+        .grid {
+            background-image: url('/images/icons.svg');
+            background-repeat: no-repeat;
+
+            @media (min-width: 900px) {
+                background-size: 6.0rem;
+            }
+            @media (max-width: 899px) {
+                background-size: 5.0rem;
+            }
+
+            padding: 0.6rem;
+
+            h1 {
+                padding-left: 1.0rem;
+            }
+        }
+    }
 
     .cols {
         margin: 3.0rem 0;
@@ -19,21 +43,35 @@ section#sysadmin {
         }
     }
 
-    h1, h2 {
-        color: @color_blue;
-        clear: both;
-        margin: 1.5rem;
-    }
-
     h1 {
-        .font1(1.9rem);
-        margin: 2.0rem 0;
+        color: @color_white;
         text-transform: uppercase;
+
+        @media (min-width: 900px) {
+            .font1(1.9rem);
+        }
+        @media (min-width: 500px) and (max-width: 899px) {
+            .font1(1.6rem);
+        }
+        @media (max-width: 499px) {
+            .font1(1.4rem);
+        }
     }
 
     h2 {
-        .font1(1.70rem);
+        color: @color_blue;
+        margin: 1.5rem;
         text-transform: uppercase;
+
+        @media (min-width: 900px) {
+            .font1(1.7rem);
+        }
+        @media (min-width: 500px) and (max-width: 899px) {
+            .font1(1.4rem);
+        }
+        @media (max-width: 499px) {
+            .font1(1.2rem);
+        }
     }
 
     p {

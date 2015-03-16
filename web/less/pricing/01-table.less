@@ -1,11 +1,22 @@
 section#pricing {
+    padding: 0 0.5rem;
+
     h1 {
         margin: 0;
         color: @color_blue;
         box-sizing: border-box;
         padding: 2.0rem 0;
-        .font1(1.9rem);
         text-transform: uppercase;
+
+        @media (min-width: 900px) {
+            .font1(1.9rem);
+        }
+        @media (min-width: 500px) and (max-width: 899px) {
+            .font1(1.6rem);
+        }
+        @media (max-width: 499px) {
+            .font1(1.4rem);
+        }
     }
 
     h2 {
@@ -13,14 +24,23 @@ section#pricing {
         color: @color_white;
         margin: 0;
         padding: 0.75rem 0.5rem;
-        .font1(1.4rem);
         text-transform: uppercase;
+
+        @media (min-width: 900px) {
+            .font1(1.4rem);
+        }
+        @media (min-width: 500px) and (max-width: 899px) {
+            .font1(1.2rem);
+        }
+        @media (max-width: 499px) {
+            .font1(1.0rem);
+        }
     }
 
     table {
         width: 100%;
         border: 1px solid @color_blue;
-        margin-bottom: 1.0rem;
+        margin-bottom: 0.5rem;
 
         tfoot {
             tr {
@@ -29,8 +49,17 @@ section#pricing {
                     color: @color_white;
                     margin: 0;
                     padding: 0.75rem 0.75rem;
-                    .font1(1.4rem);
                     text-transform: uppercase;
+
+                    @media (min-width: 900px) {
+                        .font1(1.4rem);
+                    }
+                    @media (min-width: 500px) and (max-width: 899px) {
+                        .font1(1.2rem);
+                    }
+                    @media (max-width: 499px) {
+                        .font1(1.0rem);
+                    }
                 }
             }
         }
@@ -38,7 +67,6 @@ section#pricing {
         tr {
             td {
                 padding: 0.35rem;
-                .font1(1.3rem);
 
                 &:nth-child(3) {
                     text-align: right;
