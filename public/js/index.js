@@ -9,7 +9,7 @@ skrollr.menu.init(s,{
     easing:'sqrt',
     scale:2,
     duration:function(currentTop,targetTop){
-        return Math.abs(currentTop-targetTop)*5;
+        return Math.abs(currentTop-targetTop)*2;
     }
 });
 

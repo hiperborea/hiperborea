@@ -132,16 +132,16 @@ module.exports=function(grunt){
                 src:[
                     'bower_components/skrollr/dist/skrollr.min.js'
                   , 'bower_components/skrollr-menu/dist/skrollr.menu.min.js'
-                  , 'public/js/app.js'
+                  , 'public/js/index.js'
                 ]
-              , dest:'.tmp/script.js'
+              , dest:'.tmp/index.js'
             }
         }
       , uglify:{
             dist:{
                 files:{
-                    'dist/script.js':['.tmp/script.js']
-                  , 'dist/pricing.js':['public/js/pricing.js']
+                    'dist/js/index.js':['.tmp/index.js']
+                  , 'dist/js/pricing.js':['public/js/pricing.js']
                 }
             }
         }
@@ -179,7 +179,7 @@ module.exports=function(grunt){
                   , dest:'dist/sitemap.xml'
                 },{
                     src:'bower_components/angular/angular.min.js'
-                  , dest:'dist/angular.min.js'
+                  , dest:'dist/js/angular.min.js'
                 }]
             }
         }
