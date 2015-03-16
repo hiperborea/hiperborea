@@ -1,9 +1,56 @@
 section#pricing {
     h1 {
-        background-color: @color_blue;
-        color: @color_white;
+        margin: 0;
+        color: @color_blue;
+        box-sizing: border-box;
+        padding: 2.0rem 0;
         .font1(1.9rem);
         text-transform: uppercase;
+    }
+
+    h2 {
+        background-color: @color_blue;
+        color: @color_white;
+        margin: 0;
+        padding: 0.75rem 0.5rem;
+        .font1(1.4rem);
+        text-transform: uppercase;
+    }
+
+    table {
+        width: 100%;
+        border: 1px solid @color_blue;
+        margin-bottom: 1.0rem;
+
+        tfoot {
+            tr {
+                td {
+                    background-color: lighten(@color_blue,20%);
+                    color: @color_white;
+                    margin: 0;
+                    padding: 0.75rem 0.75rem;
+                    .font1(1.4rem);
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        tr {
+            td {
+                padding: 0.35rem;
+                .font1(1.3rem);
+
+                &:nth-child(3) {
+                    text-align: right;
+                    padding-right: 0.75rem;
+                }
+            }
+
+            &.selected {
+                background-color: lighten(@color_green,20%);
+            }
+        }
+
     }
 }
 

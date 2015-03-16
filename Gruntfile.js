@@ -141,6 +141,7 @@ module.exports=function(grunt){
             dist:{
                 files:{
                     'dist/script.js':['.tmp/script.js']
+                  , 'dist/pricing.js':['public/js/pricing.js']
                 }
             }
         }
@@ -161,6 +162,7 @@ module.exports=function(grunt){
                 }
               , files:{
                     'dist/index.html':'.tmp/index.html'
+                  , 'dist/pricing.html':'.tmp/pricing.html'
                 }
             }
         }
@@ -175,6 +177,9 @@ module.exports=function(grunt){
                 },{
                     src:'public/sitemap.xml'
                   , dest:'dist/sitemap.xml'
+                },{
+                    src:'bower_components/angular/angular.min.js'
+                  , dest:'dist/angular.min.js'
                 }]
             }
         }
