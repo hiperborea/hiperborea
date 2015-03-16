@@ -1,4 +1,5 @@
-function PricingController($scope) {
+angular.module('hiperboreaApp',[])
+.controller('PricingController',['$scope',function($scope){
     $scope.data=[
         [28,0,false]
       , [21,0,false]
@@ -36,5 +37,5 @@ function PricingController($scope) {
             return sum+element[1];
         },0);
     }
-}
+}]);
 
