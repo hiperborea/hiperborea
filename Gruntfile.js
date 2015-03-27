@@ -31,7 +31,7 @@ module.exports=function(grunt){
                 }
               , files:{
                     '.tmp/index.html':'web/jade/index-dev.jade'
-                  , '.tmp/pricing.html':'web/jade/pricing-dev.jade'
+//                  , '.tmp/pricing.html':'web/jade/pricing-dev.jade'
                 }
             }
           , dist:{
@@ -40,7 +40,7 @@ module.exports=function(grunt){
                 }
               , files:{
                     '.tmp/index.html':'web/jade/index-prod.jade'
-                  , '.tmp/pricing.html':'web/jade/pricing-prod.jade'
+//                  , '.tmp/pricing.html':'web/jade/pricing-prod.jade'
                 }
             }
         }
@@ -141,7 +141,7 @@ module.exports=function(grunt){
             dist:{
                 files:{
                     'dist/js/index.js':['.tmp/index.js']
-                  , 'dist/js/pricing.js':['public/js/pricing.js']
+//                  , 'dist/js/pricing.js':['public/js/pricing.js']
                 }
             }
         }
@@ -162,7 +162,7 @@ module.exports=function(grunt){
                 }
               , files:{
                     'dist/index.html':'.tmp/index.html'
-                  , 'dist/pricing.html':'.tmp/pricing.html'
+//                  , 'dist/pricing.html':'.tmp/pricing.html'
                 }
             }
         }
