@@ -11,14 +11,15 @@ html(lang='en')
         link(rel='stylesheet',href='/style.css')
     body
         #wrapper
-            include index/01-menu
-            include index/02-logo
-            include index/03-topics
-            include index/04-about
-            include index/05-details
-            include index/06-contact
-            include index/07-security
-            include index/08-development
-            include index/09-sysadmin
+            .screen
+                .brand
+                    .icon
+                        .back
+                        .front
+                    .text
+                .bar
+                    a.icon.security
+                    a.icon.development
+                    a.icon.sysadmin
         block env
 
